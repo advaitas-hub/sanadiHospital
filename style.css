@@ -634,38 +634,7 @@ a {
   animation: heroFadeSlideUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.hero-pillars-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
-  margin-bottom: 22px;
-  padding: 12px 18px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-  width: fit-content;
-  max-width: 100%;
-  animation: heroFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
 
-.pillar-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: #1E293B;
-  white-space: nowrap;
-}
-
-.pillar-dot {
-  color: #CBD5E1;
-  font-size: 0.9rem;
-}
 
 .hero-ctas {
   display: flex;
