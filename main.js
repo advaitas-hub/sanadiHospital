@@ -527,43 +527,77 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // 11. Animated Stat Counters Count-Up Physics (Triggers ONCE)
-  const statValues = document.querySelectorAll('.stat-value, .building-stat-chip strong, .milestone-value, .exec-stat-pill strong');
-  let animatedStats = false;
+  // 11. Universal Smooth Animated Stat Counter Engine
+  const counterContainers = document.querySelectorAll(
+    '.wf-hero-stats-banner, .wf-stats-grid, .hero-stats, .trust-strip-section, .building-highlights-grid, .executive-stats-chips, .about-hero-stats'
+  );
 
-  const statsObserver = new IntersectionObserver((entries, obs) => {
+  const counterObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting && !animatedStats) {
-        animatedStats = true;
-        animateCounters();
-        obs.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        const container = entry.target;
+        obs.unobserve(container);
+
+        const statItems = container.querySelectorAll('.wf-stat-item, .wf-stat-number, .stat-value, .building-stat-chip, .trust-stat-number, .exec-stat-pill');
+        
+        statItems.forEach((item, idx) => {
+          setTimeout(() => {
+            item.classList.add('counter-animated');
+            
+            const numEl = item.classList.contains('wf-stat-number') ? item : item.querySelector('.wf-stat-number, .stat-value, strong, .trust-stat-number');
+            if (numEl && !numEl.dataset.animating) {
+              numEl.dataset.animating = 'true';
+              runCounterAnimation(numEl);
+            }
+          }, idx * 110);
+        });
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
-  const heroStatsContainer = document.querySelector('.hero-stats, .trust-strip, .building-highlights-grid, .executive-stats-chips, .about-hero-stats');
-  if (heroStatsContainer) {
-    statsObserver.observe(heroStatsContainer);
-  }
+  counterContainers.forEach(c => counterObserver.observe(c));
 
-  function animateCounters() {
-    statValues.forEach(el => {
-      const text = el.innerText.trim();
-      const numMatch = text.match(/[\d,]+/);
-      if (!numMatch) return;
-      const targetNum = parseInt(numMatch[0].replace(/,/g, ''), 10);
-      const suffix = text.replace(/[\d,]+/, '');
-      let currentNum = 0;
-      const step = Math.max(1, Math.ceil(targetNum / 45));
-      const timer = setInterval(() => {
-        currentNum += step;
-        if (currentNum >= targetNum) {
-          currentNum = targetNum;
-          clearInterval(timer);
-        }
-        el.innerText = currentNum.toLocaleString('en-IN') + suffix;
-      }, 35);
-    });
+  function runCounterAnimation(el) {
+    const spanEl = el.querySelector('span');
+    const suffixHTML = spanEl ? spanEl.outerHTML : '';
+    
+    const clone = el.cloneNode(true);
+    const spansInClone = clone.querySelectorAll('span');
+    spansInClone.forEach(s => s.remove());
+    const rawText = clone.textContent.trim();
+
+    const cleanedText = rawText.replace(/,/g, '');
+    const numMatch = cleanedText.match(/\d+/);
+    if (!numMatch) return;
+
+    const targetVal = parseInt(numMatch[0], 10);
+    const duration = Math.min(1800, Math.max(900, targetVal > 1000 ? 1400 : 1000));
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(easeProgress * targetVal);
+
+      let formattedNum = currentVal.toString();
+      if (targetVal >= 100000) {
+        formattedNum = currentVal.toLocaleString('en-IN');
+      } else if (targetVal >= 1000) {
+        formattedNum = currentVal.toLocaleString('en-IN');
+      }
+
+      el.innerHTML = `${formattedNum}${suffixHTML}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        let finalFormatted = targetVal.toLocaleString('en-IN');
+        el.innerHTML = `${finalFormatted}${suffixHTML}`;
+      }
+    }
+
+    requestAnimationFrame(updateCounter);
   }
 
   // 11.5 Trust Strip Scroll-Triggered Stagger & Count-Up Animation (Triggers ONCE)
