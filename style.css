@@ -1516,6 +1516,7 @@ body:not(.intro-complete) .hero-visual {
   pointer-events: none;
 }
 
+/* Animated Ambient Hero Backdrops & Pulsing Spheres */
 .circle-main {
   width: 420px;
   height: 420px;
@@ -1524,6 +1525,13 @@ body:not(.intro-complete) .hero-visual {
   z-index: 1;
   box-shadow: 0 20px 45px rgba(59, 130, 246, 0.18);
   border: 2px solid rgba(255, 255, 255, 0.85);
+  animation: floatCircleMain 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatCircleMain {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.03); }
+  100% { transform: translateY(0) scale(1); }
 }
 
 .circle-secondary {
@@ -1535,6 +1543,13 @@ body:not(.intro-complete) .hero-visual {
   z-index: 1;
   border: 2px solid rgba(255, 255, 255, 0.75);
   box-shadow: 0 15px 35px rgba(16, 185, 129, 0.12);
+  animation: floatCircleSec 7s ease-in-out infinite alternate;
+}
+
+@keyframes floatCircleSec {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10px, -15px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 .circle-mint-glow {
@@ -1546,6 +1561,13 @@ body:not(.intro-complete) .hero-visual {
   z-index: 1;
   border: 2px solid rgba(255, 255, 255, 0.75);
   box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+  animation: floatCircleMint 9s ease-in-out infinite alternate;
+}
+
+@keyframes floatCircleMint {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-12px, 12px) scale(1.06); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 .doctor-cutout-wrapper {
@@ -1588,7 +1610,6 @@ body:not(.intro-complete) .hero-visual {
   justify-content: center;
   box-shadow: var(--shadow-md);
   z-index: 4;
-  animation: pulseIcon 3s ease-in-out infinite alternate;
 }
 
 .icon-pulse {
@@ -1598,6 +1619,12 @@ body:not(.intro-complete) .hero-visual {
   height: 52px;
   background: #FFFFFF;
   color: var(--color-medical-blue);
+  animation: floatIconBone 3.8s ease-in-out infinite alternate !important;
+}
+
+@keyframes floatIconBone {
+  0% { transform: translateY(0) rotate(0deg); box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15); }
+  100% { transform: translateY(-14px) rotate(8deg); box-shadow: 0 16px 32px rgba(37, 99, 235, 0.25); }
 }
 
 .icon-heart {
@@ -1607,6 +1634,12 @@ body:not(.intro-complete) .hero-visual {
   height: 48px;
   background: #FFFFFF;
   color: #EC4899;
+  animation: floatIconActivity 4.2s ease-in-out infinite alternate !important;
+}
+
+@keyframes floatIconActivity {
+  0% { transform: translateY(0) rotate(0deg); box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15); }
+  100% { transform: translateY(-16px) rotate(-10deg); box-shadow: 0 16px 32px rgba(236, 72, 153, 0.25); }
 }
 
 .icon-shield {
@@ -1616,6 +1649,12 @@ body:not(.intro-complete) .hero-visual {
   height: 44px;
   background: var(--color-soft-mint);
   color: var(--color-mint-dark);
+  animation: floatIconShield 4.6s ease-in-out infinite alternate !important;
+}
+
+@keyframes floatIconShield {
+  0% { transform: translateY(0) scale(1); box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15); }
+  100% { transform: translateY(-12px) scale(1.1); box-shadow: 0 16px 32px rgba(16, 185, 129, 0.25); }
 }
 
 @keyframes pulseIcon {
