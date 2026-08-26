@@ -505,15 +505,15 @@ a {
 .hero-card {
   background: linear-gradient(135deg, #EBF2FF 0%, #F4F8FF 50%, #E6F8F3 100%);
   border-radius: var(--radius-card);
-  padding: 64px 5% 0 5%;
+  padding: 36px 5% 0 5%;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 64px;
-  align-items: flex-end;
+  gap: 40px;
+  align-items: center;
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(93, 140, 246, 0.15);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 100%;
 }
 
@@ -521,21 +521,21 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 14px;
   z-index: 2;
-  padding-bottom: 110px;
+  padding-bottom: 24px;
 }
 
 .hero-content .badge-status {
   animation: heroFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Regal Cinzel Hero Headline with Entrance & Shimmer Text Animations */
+/* Hero Headline with Entrance & Shimmer Text Animations */
 .hero-headline {
-  font-family: 'Cinzel', serif;
-  font-size: 3.5rem;
+  font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.75rem;
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.16;
   letter-spacing: -0.015em;
   color: var(--color-charcoal);
   text-shadow: 0 2px 10px rgba(18, 24, 38, 0.05);
@@ -1223,7 +1223,8 @@ a {
   align-items: flex-end;
   z-index: 2;
   width: 100%;
-  min-height: 560px;
+  min-height: 440px;
+  height: 100%;
 }
 
 .circle-backdrop {
@@ -1233,18 +1234,18 @@ a {
 }
 
 .circle-main {
-  width: 480px;
-  height: 480px;
+  width: 380px;
+  height: 380px;
   background: linear-gradient(135deg, rgba(219, 234, 254, 0.95) 0%, rgba(191, 219, 254, 0.7) 100%) !important;
-  bottom: 20px;
+  bottom: 0px;
   z-index: 1;
   box-shadow: 0 20px 45px rgba(59, 130, 246, 0.18);
   border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
 .circle-secondary {
-  width: 340px;
-  height: 340px;
+  width: 280px;
+  height: 280px;
   background: linear-gradient(135deg, rgba(204, 251, 241, 0.9) 0%, rgba(153, 246, 228, 0.65) 100%) !important;
   bottom: 0px;
   left: 0px;
@@ -1254,10 +1255,10 @@ a {
 }
 
 .circle-mint-glow {
-  width: 260px;
-  height: 260px;
+  width: 220px;
+  height: 220px;
   background: linear-gradient(135deg, rgba(224, 231, 255, 0.9) 0%, rgba(199, 210, 254, 0.65) 100%) !important;
-  top: 40px;
+  top: 15px;
   right: 0px;
   z-index: 1;
   border: 2px solid rgba(255, 255, 255, 0.75);
@@ -1268,8 +1269,8 @@ a {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 520px;
-  height: 560px;
+  max-width: 440px;
+  height: 440px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1280,11 +1281,11 @@ a {
 .doctor-cutout-wrapper img {
   width: auto;
   height: 100%;
-  max-height: 580px;
+  max-height: 440px;
   object-fit: contain;
   object-position: bottom center;
   display: block;
-  filter: drop-shadow(0 20px 30px rgba(18, 24, 38, 0.18));
+  filter: drop-shadow(0 16px 28px rgba(18, 24, 38, 0.18));
   transition: transform 0.4s ease;
   margin-bottom: 0;
 }
