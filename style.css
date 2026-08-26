@@ -13074,7 +13074,10 @@ body.editorial-about-page {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #0F172A;
   color: #FFFFFF;
+  border: 1px solid #1E293B;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
   flex-shrink: 0;
 }
 
