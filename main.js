@@ -566,6 +566,11 @@ document.addEventListener('DOMContentLoaded', () => {
     spansInClone.forEach(s => s.remove());
     const rawText = clone.textContent.trim();
 
+    // Skip counting animation for constant values like 24/7
+    if (el.textContent.includes('/') || (spanEl && spanEl.textContent.includes('/7'))) {
+      return;
+    }
+
     const cleanedText = rawText.replace(/,/g, '');
     const numMatch = cleanedText.match(/\d+/);
     if (!numMatch) return;
