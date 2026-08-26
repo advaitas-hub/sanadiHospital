@@ -12796,213 +12796,69 @@ body.editorial-about-page {
   margin-top: 4px;
 }
 
-/* Animated SVG Area Line Chart Graph Dashboard */
-.graphical-chart-card {
-  width: 100%;
-  background: #FFFFFF;
-  border-radius: 24px;
-  border: 1px solid #E2E8F0;
-  padding: 24px;
-  box-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.07);
+/* Why Choose Sanadi Hospital - Feature Commitment Lines */
+.why-choose-commitments-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
-  overflow: hidden;
-  margin-top: 14px;
+  gap: 16px;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.chart-card-header {
+.commitment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.commitment-item:hover {
+  transform: translateX(6px);
+  border-color: #93C5FD;
+  box-shadow: 0 10px 24px -4px rgba(37, 99, 235, 0.12);
+}
+
+.commitment-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-.chart-title-box {
+.commitment-icon-box.icon-blue { background: linear-gradient(135deg, #2563EB, #3B82F6); }
+.commitment-icon-box.icon-teal { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+.commitment-icon-box.icon-emerald { background: linear-gradient(135deg, #059669, #10B981); }
+.commitment-icon-box.icon-purple { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
+
+.commitment-content {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.chart-badge-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  color: #059669;
-  background: #ECFDF5;
-  border: 1px solid #A7F3D0;
-  padding: 3px 10px;
-  border-radius: 9999px;
-  letter-spacing: 0.08em;
-}
-
-.live-dot {
-  width: 6px;
-  height: 6px;
-  background: #10B981;
-  border-radius: 50%;
-  animation: liveDotPulse 1.2s infinite ease-in-out alternate;
-}
-
-@keyframes liveDotPulse {
-  0% { transform: scale(0.8); opacity: 0.5; }
-  100% { transform: scale(1.4); opacity: 1; }
-}
-
-.chart-card-title {
+.commitment-title {
   font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #0F172A;
-}
-
-.chart-tab-buttons {
-  display: flex;
-  gap: 6px;
-  background: #F1F5F9;
-  padding: 4px;
-  border-radius: 12px;
-}
-
-.chart-tab-btn {
-  border: none;
-  background: transparent;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 0.78rem;
+  font-size: 1.05rem;
   font-weight: 700;
+  color: #0F172A;
+  line-height: 1.3;
+}
+
+.commitment-desc {
+  font-size: 0.88rem;
   color: #64748B;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  line-height: 1.5;
 }
-
-.chart-tab-btn.active {
-  background: #FFFFFF;
-  color: #2563EB;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-}
-
-/* SVG Chart Viewport */
-.chart-svg-viewport {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
-  border-radius: 16px;
-  border: 1px solid #F1F5F9;
-  padding: 10px;
-}
-
-.graph-svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-/* SVG Path Drawing Animations */
-.graph-line-path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1), d 0.6s ease;
-}
-
-.graph-area-path {
-  opacity: 0;
-  transition: opacity 1.5s ease 0.6s, d 0.6s ease;
-}
-
-.graphical-chart-card.is-drawn .graph-line-path {
-  stroke-dashoffset: 0;
-}
-
-.graphical-chart-card.is-drawn .graph-area-path {
-  opacity: 1;
-}
-
-.point-pulse {
-  animation: nodePulse 1.8s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-@keyframes nodePulse {
-  0% { transform: scale(0.8); opacity: 0.9; }
-  100% { transform: scale(1.6); opacity: 0; }
-}
-
-/* Floating Chart Tooltips */
-.chart-tooltip {
-  position: absolute;
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(8px);
-  color: #FFFFFF;
-  padding: 5px 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
-  opacity: 0;
-  transform: translateY(10px) scale(0.9);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.graphical-chart-card.is-drawn .chart-tooltip {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.tooltip-1 { top: 0px; right: 2%; transition-delay: 1.2s; }
-.tooltip-2 { top: 20px; left: 44%; transition-delay: 0.9s; }
-.tooltip-3 { top: 80px; left: 24%; transition-delay: 0.6s; }
-
-.tooltip-val {
-  font-weight: 900;
-  font-size: 0.85rem;
-  color: #38BDF8;
-}
-
-.tooltip-lbl {
-  font-size: 0.65rem;
-  color: #94A3B8;
-  white-space: nowrap;
-}
-
-/* Bottom Summary Strip */
-.chart-bottom-summary {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding-top: 14px;
-  border-top: 1px solid #F1F5F9;
-  text-align: center;
-}
-
-.summary-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.sum-num {
-  font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
-.sum-lbl {
-  font-size: 0.75rem;
-  color: #64748B;
-  font-weight: 600;
-}
-
-.text-teal { color: #0D9488; }
-.text-blue { color: #2563EB; }
-.text-emerald { color: #059669; }
 
 /* Right Column 6 Cards Grid */
 .why-choose-cards-grid {

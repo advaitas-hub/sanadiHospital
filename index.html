@@ -335,94 +335,50 @@
                 At Sanadi Orthopaedic Hospital, we believe healthcare is about precision, ultra-sterile surgical suites, and building lasting recovery with our patients.
               </p>
 
-              <!-- Live Animated Graphical Chart Dashboard -->
-              <div class="graphical-chart-card" id="clinicalOutcomeGraphCard">
+              <!-- Hospital Excellence Pillars & Commitments (Replaced Graph Box) -->
+              <div class="why-choose-commitments-list">
                 
-                <!-- Chart Header Controls -->
-                <div class="chart-card-header">
-                  <div class="chart-title-box">
-                    <span class="chart-badge-live"><span class="live-dot"></span> LIVE CLINICAL METRICS</span>
-                    <h4 class="chart-card-title">Patient Outcomes & Surgical Recovery</h4>
+                <!-- Line 1: Experienced Orthopaedic Team -->
+                <div class="commitment-item">
+                  <div class="commitment-icon-box icon-blue">
+                    <i data-lucide="award" style="width: 20px; height: 20px;"></i>
                   </div>
-                  <div class="chart-tab-buttons">
-                    <button type="button" class="chart-tab-btn active" data-graph="outcomes">Success</button>
-                    <button type="button" class="chart-tab-btn" data-graph="recovery">Recovery</button>
-                  </div>
-                </div>
-
-                <!-- Animated SVG Area Line Chart Graph -->
-                <div class="chart-svg-viewport">
-                  <svg viewBox="0 0 500 200" class="graph-svg" id="graphSvg">
-                    <defs>
-                      <linearGradient id="chartGradientBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#2563EB" stop-opacity="0.35"/>
-                        <stop offset="100%" stop-color="#2563EB" stop-opacity="0.0"/>
-                      </linearGradient>
-                      <linearGradient id="chartLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#2563EB"/>
-                        <stop offset="50%" stop-color="#0D9488"/>
-                        <stop offset="100%" stop-color="#10B981"/>
-                      </linearGradient>
-                    </defs>
-
-                    <!-- Background Grid Lines -->
-                    <line x1="0" y1="40" x2="500" y2="40" stroke="#E2E8F0" stroke-dasharray="4 4"/>
-                    <line x1="0" y1="90" x2="500" y2="90" stroke="#E2E8F0" stroke-dasharray="4 4"/>
-                    <line x1="0" y1="140" x2="500" y2="140" stroke="#E2E8F0" stroke-dasharray="4 4"/>
-
-                    <!-- Filled Gradient Area Under Curve -->
-                    <path id="graphAreaPath" d="M 30 140 Q 150 110, 250 50 T 470 30 L 470 180 L 30 180 Z" fill="url(#chartGradientBlue)" class="graph-area-path"/>
-
-                    <!-- Main Animated Curve Line -->
-                    <path id="graphLinePath" d="M 30 140 Q 150 110, 250 50 T 470 30" fill="none" stroke="url(#chartLineGradient)" stroke-width="4.5" stroke-linecap="round" class="graph-line-path"/>
-
-                    <!-- Animated Data Point 1 (Joint Success 99%) -->
-                    <g class="graph-data-point point-1">
-                      <circle cx="470" cy="30" r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="3.5" class="point-circle"/>
-                      <circle cx="470" cy="30" r="14" fill="none" stroke="#10B981" stroke-width="2" class="point-pulse"/>
-                    </g>
-
-                    <!-- Animated Data Point 2 (Mobility 96%) -->
-                    <g class="graph-data-point point-2">
-                      <circle cx="250" cy="50" r="7" fill="#0D9488" stroke="#FFFFFF" stroke-width="3.5" class="point-circle"/>
-                      <circle cx="250" cy="50" r="14" fill="none" stroke="#0D9488" stroke-width="2" class="point-pulse"/>
-                    </g>
-
-                    <!-- Animated Data Point 3 (Emergency 98%) -->
-                    <g class="graph-data-point point-3">
-                      <circle cx="150" cy="110" r="7" fill="#2563EB" stroke="#FFFFFF" stroke-width="3.5" class="point-circle"/>
-                      <circle cx="150" cy="110" r="14" fill="none" stroke="#2563EB" stroke-width="2" class="point-pulse"/>
-                    </g>
-                  </svg>
-
-                  <!-- Floating Tooltip Badges Overlay -->
-                  <div class="chart-tooltip tooltip-1">
-                    <span class="tooltip-val">99%</span>
-                    <span class="tooltip-lbl">Surgical Success</span>
-                  </div>
-                  <div class="chart-tooltip tooltip-2">
-                    <span class="tooltip-val">96%</span>
-                    <span class="tooltip-lbl">Mobility Rate</span>
-                  </div>
-                  <div class="chart-tooltip tooltip-3">
-                    <span class="tooltip-val">98%</span>
-                    <span class="tooltip-lbl">Emergency Standby</span>
+                  <div class="commitment-content">
+                    <h4 class="commitment-title">Senior Specialist Surgeons</h4>
+                    <p class="commitment-desc">Led by Dr. Sanadi with over 20+ years of dedicated sub-specialty experience in joint replacement & spine care.</p>
                   </div>
                 </div>
 
-                <!-- Bottom Metrics Summary Strip -->
-                <div class="chart-bottom-summary">
-                  <div class="summary-stat">
-                    <span class="sum-num text-teal">99%</span>
-                    <span class="sum-lbl">Joint Success</span>
+                <!-- Line 2: Ultra-Sterile Modular OTs -->
+                <div class="commitment-item">
+                  <div class="commitment-icon-box icon-teal">
+                    <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
                   </div>
-                  <div class="summary-stat">
-                    <span class="sum-num text-blue">96%</span>
-                    <span class="sum-lbl">Patient Mobility</span>
+                  <div class="commitment-content">
+                    <h4 class="commitment-title">HEPA-14 Ultra-Sterile OTs</h4>
+                    <p class="commitment-desc">Class-100 vertical laminar airflow suites for infection-free surgical outcomes and ultra-clean safety.</p>
                   </div>
-                  <div class="summary-stat">
-                    <span class="sum-num text-emerald">98%</span>
-                    <span class="sum-lbl">Trauma Speed</span>
+                </div>
+
+                <!-- Line 3: 24/7 Rapid Emergency Response -->
+                <div class="commitment-item">
+                  <div class="commitment-icon-box icon-emerald">
+                    <i data-lucide="zap" style="width: 20px; height: 20px;"></i>
+                  </div>
+                  <div class="commitment-content">
+                    <h4 class="commitment-title">24×7 Emergency & Trauma Standby</h4>
+                    <p class="commitment-desc">Round-the-clock emergency triage, on-site digital imaging, and senior orthopaedic surgeon availability.</p>
+                  </div>
+                </div>
+
+                <!-- Line 4: Surgeon-Guided Rehabilitation -->
+                <div class="commitment-item">
+                  <div class="commitment-icon-box icon-purple">
+                    <i data-lucide="heart-pulse" style="width: 20px; height: 20px;"></i>
+                  </div>
+                  <div class="commitment-content">
+                    <h4 class="commitment-title">Surgeon-Guided Rehabilitation</h4>
+                    <p class="commitment-desc">Personalized post-op gait training, electrotherapy, and physical therapy focused on long-term mobility.</p>
                   </div>
                 </div>
 
