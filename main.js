@@ -8,13 +8,75 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // 2. Sticky Header Scroll Shadow Class Toggle
+  // 2. Dynamic Scroll Engine (Progress Bar, Back-to-Top, Header Glassmorphism)
   const header = document.getElementById('header');
+
+  // Create Top Scroll Progress Bar
+  let progressBar = document.getElementById('scrollProgressBar');
+  if (!progressBar) {
+    progressBar = document.createElement('div');
+    progressBar.id = 'scrollProgressBar';
+    progressBar.className = 'scroll-progress-bar';
+    document.body.prepend(progressBar);
+  }
+
+  // Create Floating Back-to-Top Button
+  let backToTopBtn = document.getElementById('backToTopBtn');
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'backToTopBtn';
+    backToTopBtn.className = 'back-to-top-btn';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    backToTopBtn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    `;
+    document.body.appendChild(backToTopBtn);
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Scroll Event Listener (Optimized via requestAnimationFrame)
+  let isTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        const scrolled = window.scrollY;
+
+        // Header scrolled class
+        if (scrolled > 20) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+
+        // Update Reading Progress Bar
+        const winHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (winHeight > 0 && progressBar) {
+          const progressPercent = Math.min(100, Math.max(0, (scrolled / winHeight) * 100));
+          progressBar.style.width = `${progressPercent}%`;
+        }
+
+        // Toggle Back-to-Top Button visibility
+        if (scrolled > 300) {
+          backToTopBtn?.classList.add('is-visible');
+        } else {
+          backToTopBtn?.classList.remove('is-visible');
+        }
+
+        // Subtle Parallax Scroll Effect for Hero and Floating Graphics
+        const parallaxEls = document.querySelectorAll('[data-parallax], .hero-doctor-cutout, .editorial-ot-hero');
+        parallaxEls.forEach(el => {
+          const speed = parseFloat(el.getAttribute('data-parallax-speed') || '-0.08');
+          el.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+
+        isTicking = false;
+      });
+      isTicking = true;
     }
   });
 
@@ -464,7 +526,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 10. Scroll Entrance Reveal Intersection Observer (Triggers ONCE per page load)
-  const revealElements = document.querySelectorAll('.reveal-on-scroll, .section-header-center, .specialty-card, .facility-card, .contact-info-card, .contact-form-card');
+  const revealElements = document.querySelectorAll(
+    '.reveal-on-scroll, .section-header-center, .specialty-card, .facility-card, .contact-info-card, .contact-form-card, .trust-bento-card, .feature-card, .creative-facility-card, .specialist-card-item, .editorial-hospital-card, .specialty-hero-wrap, .stat-chip-editorial'
+  );
   const revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -472,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
   revealElements.forEach(el => {
     el.classList.add('reveal-on-scroll');

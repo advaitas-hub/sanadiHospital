@@ -12885,3 +12885,171 @@ body.editorial-about-page {
     padding: 60px 16px;
   }
 }
+
+/* ==========================================================================
+   DYNAMIC SCROLL EFFECTS & INTERACTIVE REVEALS
+   ========================================================================== */
+
+/* 1. Top Reading Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #2563EB, #10B981, #3B82F6, #6366F1);
+  background-size: 200% 100%;
+  animation: gradientFlow 4s ease infinite;
+  z-index: 10000;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.6), 0 0 20px rgba(16, 185, 129, 0.4);
+  transition: width 0.08s ease-out;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  pointer-events: none;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Enhanced Header Glassmorphism on Scroll */
+header.header-fixed.scrolled {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08) !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* 3. Floating Back to Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-medical-blue, #5D8CF6);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top-btn:hover {
+  background: #3B82F6;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.5);
+  color: #FFFFFF;
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.back-to-top-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover svg {
+  transform: translateY(-3px);
+}
+
+/* 4. Smooth Scroll Reveal Classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale-up {
+  opacity: 0;
+  transform: scale(0.92) translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale-up.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* 5. Nav Link ScrollSpy Indicator */
+.nav-item-link.scroll-active {
+  color: var(--color-medical-blue, #5D8CF6) !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+
+.nav-item-link.scroll-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 3px;
+  background: var(--color-medical-blue, #5D8CF6);
+  border-radius: 99px;
+  animation: pulseIndicator 2s ease infinite;
+}
+
+@keyframes pulseIndicator {
+  0%, 100% { opacity: 1; transform: translateX(-50%) scaleX(1); }
+  50% { opacity: 0.6; transform: translateX(-50%) scaleX(1.3); }
+}
+
+/* 6. Smooth Parallax Subtle Layering */
+.parallax-smooth {
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+  will-change: transform;
+}
