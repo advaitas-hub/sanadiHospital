@@ -9,13 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
       preloader.classList.add('fade-out');
+      document.body.classList.add('intro-complete');
       document.body.style.overflow = '';
       setTimeout(() => {
         if (preloader.parentNode) {
           preloader.parentNode.removeChild(preloader);
         }
       }, 850);
-    }, 1500);
+    }, 1400);
+  } else {
+    document.body.classList.add('intro-complete');
   }
 
   // 1. Initialize Lucide Icons
