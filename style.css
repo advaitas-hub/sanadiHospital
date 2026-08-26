@@ -12391,10 +12391,50 @@ body.editorial-about-page {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
+  .wf-hero-stats-banner {
+    padding: 20px 12px !important;
+    border-radius: 20px !important;
+    margin: 20px 0 36px 0 !important;
+  }
+
   .wf-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 28px 0;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px 10px !important;
+  }
+
+  .wf-stat-item {
+    padding: 10px 4px !important;
+  }
+
+  .wf-stat-item::after {
+    display: none !important;
+  }
+
+  .wf-stat-icon-box {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 12px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .wf-stat-icon-box svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .wf-stat-number {
+    font-size: 1.55rem !important;
+  }
+
+  .wf-stat-label {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .wf-stat-sublabel {
+    font-size: 0.70rem !important;
+    line-height: 1.2 !important;
   }
 }
 
