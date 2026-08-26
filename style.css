@@ -607,8 +607,8 @@ a {
 .hero-headline-prefix {
   font-family: 'Allura', 'Fleur De Leah', 'Shadows Into Light', cursive !important;
   font-size: 3.4rem !important;
-  font-weight: 400 !important;
-  color: #0F172A !important;
+  font-weight: 500 !important;
+  color: #000000 !important;
   display: block !important;
   line-height: 1.15 !important;
   letter-spacing: 0.01em !important;
