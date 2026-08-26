@@ -596,12 +596,70 @@ a {
   }
 }
 
-/* Hero Lead Statement & 3-Pillar Brand Bar */
+/* ==========================================================================
+   CINEMATIC HERO ENTRANCE TEXT & ELEMENT ANIMATION SYSTEM
+   ========================================================================== */
+
+@keyframes heroBlurSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.96);
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes heroPopGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.88);
+    filter: blur(8px);
+  }
+  60% {
+    transform: translateY(-4px) scale(1.03);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes heroBtnSpring {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.9);
+  }
+  70% {
+    transform: translateY(-3px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroDoctorFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Staggered Element Entrance Sequences */
 .hero-eyebrow-brand {
   font-size: 0.78rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.08em !important;
   padding: 6px 16px !important;
+  animation: heroPopGlow 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both !important;
 }
 
 .hero-headline-prefix {
@@ -617,18 +675,21 @@ a {
   line-height: 1.15 !important;
   letter-spacing: 0.01em !important;
   margin-bottom: 2px !important;
-  filter: none !important;
-  animation: none !important;
+  animation: heroBlurSlideUp 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both !important;
+  will-change: transform, opacity, filter;
 }
 
 .hero-headline-highlight {
   font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif !important;
   font-weight: 900 !important;
   background: linear-gradient(135deg, #1E40AF 0%, #2563EB 40%, #0D9488 100%) !important;
+  background-size: 200% auto !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   display: inline-block !important;
   filter: drop-shadow(0 4px 16px rgba(37, 99, 235, 0.35)) !important;
+  animation: heroPopGlow 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both, gradientFlow 4s linear infinite, glowPulse 3s ease-in-out infinite alternate !important;
+  will-change: transform, opacity, filter;
 }
 
 .hero-lead-statement {
@@ -639,7 +700,8 @@ a {
   line-height: 1.45;
   margin-top: 14px;
   max-width: 580px;
-  animation: heroFadeSlideUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroBlurSlideUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.82s both;
+  will-change: transform, opacity, filter;
 }
 
 .hero-subtext {
@@ -648,7 +710,48 @@ a {
   max-width: 580px;
   line-height: 1.65;
   margin-top: 10px;
-  animation: heroFadeSlideUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroBlurSlideUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.02s both;
+  will-change: transform, opacity, filter;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  animation: heroBtnSpring 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 1.22s both;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+  width: 100%;
+  min-height: 480px;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0;
+  animation: heroBlurSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.40s both;
+}
+
+.doctor-cutout-wrapper img {
+  width: auto;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  filter: drop-shadow(0 16px 28px rgba(18, 24, 38, 0.18));
+  transition: transform 0.4s ease;
+  margin-bottom: 0;
+  vertical-align: bottom;
+  animation: heroDoctorFloat 6s ease-in-out 1.7s infinite alternate;
 }
 
 
