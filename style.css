@@ -13455,12 +13455,20 @@ header.header-fixed.scrolled {
   transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.45s ease !important;
 }
 
-.services-section.section-revealed .specialty-card:nth-child(1) .specialty-icon-wrapper { transition-delay: 0.25s; transform: scale(1) rotate(0deg); opacity: 1; }
-.services-section.section-revealed .specialty-card:nth-child(2) .specialty-icon-wrapper { transition-delay: 0.39s; transform: scale(1) rotate(0deg); opacity: 1; }
-.services-section.section-revealed .specialty-card:nth-child(3) .specialty-icon-wrapper { transition-delay: 0.53s; transform: scale(1) rotate(0deg); opacity: 1; }
-.services-section.section-revealed .specialty-card:nth-child(4) .specialty-icon-wrapper { transition-delay: 0.67s; transform: scale(1) rotate(0deg); opacity: 1; }
-.services-section.section-revealed .specialty-card:nth-child(5) .specialty-icon-wrapper { transition-delay: 0.81s; transform: scale(1) rotate(0deg); opacity: 1; }
-.services-section.section-revealed .specialty-card:nth-child(6) .specialty-icon-wrapper { transition-delay: 0.95s; transform: scale(1) rotate(0deg); opacity: 1; }
+.services-section.section-revealed .specialty-card .specialty-icon-wrapper,
+.specialty-card.is-revealed .specialty-icon-wrapper,
+.specialty-card.visible .specialty-icon-wrapper {
+  opacity: 1 !important;
+  transform: scale(1) rotate(0deg) !important;
+}
+
+.services-section.section-revealed .specialty-card:nth-child(1) .specialty-icon-wrapper { transition-delay: 0.25s; }
+.services-section.section-revealed .specialty-card:nth-child(2) .specialty-icon-wrapper { transition-delay: 0.39s; }
+.services-section.section-revealed .specialty-card:nth-child(3) .specialty-icon-wrapper { transition-delay: 0.53s; }
+.services-section.section-revealed .specialty-card:nth-child(4) .specialty-icon-wrapper { transition-delay: 0.67s; }
+.services-section.section-revealed .specialty-card:nth-child(5) .specialty-icon-wrapper { transition-delay: 0.81s; }
+.services-section.section-revealed .specialty-card:nth-child(6) .specialty-icon-wrapper { transition-delay: 0.95s; }
+.services-section.section-revealed .specialty-card:nth-child(7) .specialty-icon-wrapper { transition-delay: 1.09s; }
 
 /* Featured Card Popular Badge Shimmer Glow */
 .specialty-badge {
