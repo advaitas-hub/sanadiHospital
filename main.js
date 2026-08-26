@@ -1681,8 +1681,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
+      rootMargin: '50px 0px -20px 0px',
+      threshold: 0.05
     };
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -1694,7 +1694,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     const elementsToReveal = document.querySelectorAll('.reveal-on-scroll, .reveal-fade-left, .reveal-fade-right, .reveal-scale');
-    elementsToReveal.forEach(el => revealObserver.observe(el));
+    elementsToReveal.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) {
+        el.classList.add('is-visible');
+      }
+      revealObserver.observe(el);
+    });
   }
 
   function initStatProgressBars() {
