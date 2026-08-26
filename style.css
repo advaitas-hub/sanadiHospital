@@ -1790,12 +1790,13 @@ body:not(.intro-complete) .hero-visual {
   background: #FFFFFF;
   border: 1.5px solid var(--card-border-color);
   border-radius: var(--radius-card);
-  padding: 28px;
+  padding: 20px 24px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 10px;
+  min-height: 140px;
   cursor: pointer;
   user-select: none;
   overflow: hidden;
@@ -1916,8 +1917,7 @@ body:not(.intro-complete) .hero-visual {
 }
 
 .specialty-card.hidden-card.visible {
-  display: flex;
-  animation: fadeInCard 0.4s ease forwards;
+  display: flex !important;
 }
 
 @keyframes fadeInCard {
@@ -1984,21 +1984,6 @@ body:not(.intro-complete) .hero-visual {
 
 .specialty-card.featured-card {
   --card-border-bg: #CBD5E1;
-}
-
-.specialty-card.featured-card::before {
-  content: 'POPULAR';
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--color-charcoal);
-  color: #FFFFFF;
-  font-size: 0.65rem;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  letter-spacing: 0.05em;
-  z-index: 2;
 }
 
 .specialty-badge {
