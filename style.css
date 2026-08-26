@@ -9606,16 +9606,86 @@ button[type="submit"]:active {
 }
 
 @media (max-width: 640px) {
+  .about-hero-redesigned,
+  .about-hero-editorial {
+    padding: 36px 18px 40px !important;
+    border-radius: 28px !important;
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.95), rgba(255, 255, 255, 0.98)) !important;
+    border: 1.5px solid #BFDBFE !important;
+    box-shadow: 0 12px 36px rgba(37, 99, 235, 0.1) !important;
+    text-align: center !important;
+    margin-bottom: 28px !important;
+  }
+
+  .about-hero-editorial-centered {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .about-eyebrow-wrapper {
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .about-eyebrow-glass {
+    padding: 6px 16px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .hero-title-gradient,
+  .about-hero-editorial-title {
+    font-size: 2.15rem !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .about-hero-story-block {
+    text-align: center !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .about-hero-editorial-lead,
+  .about-hero-editorial-subtext {
+    text-align: center !important;
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+  }
+
   .about-hero-cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    margin-top: 24px !important;
   }
 
-  .hero-title-gradient {
-    font-size: 2.2rem;
+  .about-hero-card {
+    padding: 12px 10px !important;
+    gap: 10px !important;
+    border-radius: 16px !important;
   }
 
-  .about-hero-redesigned {
-    padding: 36px 16px 40px;
+  .hero-card-icon-box {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+  }
+
+  .hero-card-icon-box svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .hero-card-label {
+    font-size: 0.65rem !important;
+  }
+
+  .hero-card-val {
+    font-size: 1.15rem !important;
+  }
+
+  .hero-card-sub {
+    font-size: 0.68rem !important;
   }
 }
 
