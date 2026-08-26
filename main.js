@@ -26,6 +26,51 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
+  // 1.5 Clinical Metrics Scroll-Triggered Counter & Bar Fill Engine
+  const metricsWrapper = document.getElementById('clinicalMetricsDashboard');
+  if (metricsWrapper) {
+    let animated = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          metricsWrapper.classList.add('is-animated');
+          
+          // Animate Progress Bar Fills
+          const fills = metricsWrapper.querySelectorAll('.metric-fill');
+          fills.forEach((fill, idx) => {
+            const targetWidth = fill.getAttribute('data-width');
+            fill.style.width = '0%';
+            setTimeout(() => {
+              fill.style.width = targetWidth;
+            }, idx * 180 + 100);
+          });
+
+          // Animate Number Counters Count-Up
+          const counters = metricsWrapper.querySelectorAll('.counter-num');
+          counters.forEach((counter, idx) => {
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            let count = 0;
+            counter.innerText = '0%';
+            setTimeout(() => {
+              const duration = 1600;
+              const stepTime = Math.abs(Math.floor(duration / target));
+              const timer = setInterval(() => {
+                count += 1;
+                counter.innerText = count + '%';
+                if (count >= target) {
+                  counter.innerText = target + '%';
+                  clearInterval(timer);
+                }
+              }, stepTime);
+            }, idx * 180 + 100);
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(metricsWrapper);
+  }
+
   // 2. Dynamic Scroll Engine (Header Glassmorphic Blur, Back-to-Top, Parallax)
   const header = document.getElementById('header');
 

@@ -335,37 +335,63 @@
                 At Sanadi Orthopaedic Hospital, we believe healthcare is about precision, ultra-sterile surgical suites, and building lasting recovery with our patients.
               </p>
 
-              <!-- Live Clinical Outcome Progress Bars -->
-              <div class="clinical-metrics-wrapper">
-                <div class="metric-item">
-                  <div class="metric-header">
-                    <span class="metric-label">Joint Replacement Success Rate</span>
-                    <span class="metric-value">99%</span>
+              <!-- Live Animated Graphical Clinical Metrics Dashboard -->
+              <div class="clinical-metrics-wrapper" id="clinicalMetricsDashboard">
+                
+                <!-- Metric 1 -->
+                <div class="metric-card-box">
+                  <div class="metric-header-row">
+                    <div class="metric-title-group">
+                      <div class="metric-badge-icon icon-teal">
+                        <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+                      </div>
+                      <span class="metric-label">Joint Replacement Success Rate</span>
+                    </div>
+                    <span class="metric-value counter-num" data-target="99">99%</span>
                   </div>
                   <div class="metric-track">
-                    <div class="metric-fill fill-teal" style="width: 99%;"></div>
+                    <div class="metric-fill fill-teal" data-width="99%" style="width: 99%;">
+                      <span class="metric-glow-head"></span>
+                    </div>
                   </div>
                 </div>
 
-                <div class="metric-item">
-                  <div class="metric-header">
-                    <span class="metric-label">Patient Recovery & Mobility Rate</span>
-                    <span class="metric-value">96%</span>
+                <!-- Metric 2 -->
+                <div class="metric-card-box">
+                  <div class="metric-header-row">
+                    <div class="metric-title-group">
+                      <div class="metric-badge-icon icon-blue">
+                        <i data-lucide="activity" style="width: 16px; height: 16px;"></i>
+                      </div>
+                      <span class="metric-label">Patient Recovery & Mobility Rate</span>
+                    </div>
+                    <span class="metric-value counter-num" data-target="96">96%</span>
                   </div>
                   <div class="metric-track">
-                    <div class="metric-fill fill-blue" style="width: 96%;"></div>
+                    <div class="metric-fill fill-blue" data-width="96%" style="width: 96%;">
+                      <span class="metric-glow-head"></span>
+                    </div>
                   </div>
                 </div>
 
-                <div class="metric-item">
-                  <div class="metric-header">
-                    <span class="metric-label">24/7 Emergency Trauma Response</span>
-                    <span class="metric-value">98%</span>
+                <!-- Metric 3 -->
+                <div class="metric-card-box">
+                  <div class="metric-header-row">
+                    <div class="metric-title-group">
+                      <div class="metric-badge-icon icon-emerald">
+                        <i data-lucide="zap" style="width: 16px; height: 16px;"></i>
+                      </div>
+                      <span class="metric-label">24/7 Emergency Trauma Response</span>
+                    </div>
+                    <span class="metric-value counter-num" data-target="98">98%</span>
                   </div>
                   <div class="metric-track">
-                    <div class="metric-fill fill-emerald" style="width: 98%;"></div>
+                    <div class="metric-fill fill-emerald" data-width="98%" style="width: 98%;">
+                      <span class="metric-glow-head"></span>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
 
