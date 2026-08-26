@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanadi Orthopaedic Hospital | Advanced Joint & Bone Care Jamkhandi</title>
+  <meta name="description"
+    content="Established in 2003 by Dr. G. N. Sanadi, Sanadi Orthopaedic Hospital in Jamkhandi is a 40-bedded center of excellence with 22+ years experience, 6,00,000+ patients treated, and 20,000+ successful surgeries.">
+
+  <!-- Preconnect & User Requested Google Fonts Bundle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+TAS+Beginner:wght@400..700&family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Fleur+De+Leah&family=Griffy&family=Jim+Nightshade&family=Shadows+Into+Light&family=Yuyu+Short&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- Main Centered Container Wrapper -->
+  <div class="site-container">
+
+    <!-- 1. Sticky Top Navigation -->
+    <header class="site-header" id="header">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <!-- Hospital Logo -->
+        <a href="/index.html" class="brand-logo">
+          <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
+          <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html" class="nav-link">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-link" onclick="event.preventDefault()">Specialties <i
+                data-lucide="chevron-down" style="width: 14px; height: 14px; margin-left: 4px;"></i></a>
+            <div class="dropdown-menu">
+              <a href="specialties/orthopaedics.html" class="dropdown-item">Orthopaedics</a>
+              <a href="specialties/trauma-care.html" class="dropdown-item">Trauma Care</a>
+              <a href="specialties/neurosurgery.html" class="dropdown-item">Neurosurgery</a>
+              <a href="specialties/joint-replacement.html" class="dropdown-item">Joint Replacement</a>
+              <a href="specialties/arthroscopy.html" class="dropdown-item">Arthroscopy</a>
+              <a href="specialties/physiotherapy.html" class="dropdown-item">Physiotherapy</a>
+              <a href="specialties/sports-injury-clinic.html" class="dropdown-item">Sports Injury Clinic</a>
+            </div>
+          </li>
+          <li><a href="/facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="#doctors" class="nav-link">Surgeons</a></li>
+          <li><a href="/about.html" class="nav-link">About Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-outline">Contact us</a>
+          <a href="#contact" class="btn btn-dark">Book now</a>
+          <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle Menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 2. Hero Section -->
+      <section class="hero-card" id="hero">
+        <div class="hero-content">
+          <div class="badge-status badge-mint">
+            <span class="status-dot green"></span>
+            SPECIALIZED ORTHOPAEDIC CARE
+          </div>
+
+          <h1 class="hero-headline">
+            Helping you move better, with confidence.
+          </h1>
+
+          <p class="hero-subtext">
+            From joint replacement and arthroscopy to trauma and spine care, our orthopaedic team provides specialized
+            treatment focused on reducing pain, restoring movement and helping patients return to everyday life.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary" id="heroBookBtn">
+              Book an Appointment
+              <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+            </a>
+            <a href="#doctors" class="btn btn-text">
+              Meet our surgeons
+              <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Circular Blue Background Backdrop Shapes -->
+          <div class="circle-backdrop circle-main"></div>
+          <div class="circle-backdrop circle-secondary"></div>
+          <div class="circle-backdrop circle-mint-glow"></div>
+
+          <!-- Cutout Doctor Image Container -->
+          <div class="doctor-cutout-wrapper">
+            <img src="/images/dr-sanadi-founder.png" alt="Dr. G. N. Sanadi - Founder & Chief Orthopaedic Surgeon">
+          </div>
+
+          <!-- Small Medical Decorative Icons -->
+          <div class="decorative-icon icon-pulse">
+            <i data-lucide="bone" style="width: 22px; height: 22px;"></i>
+          </div>
+          <div class="decorative-icon icon-heart">
+            <i data-lucide="activity" style="width: 22px; height: 22px;"></i>
+          </div>
+          <div class="decorative-icon icon-shield">
+            <i data-lucide="shield-check" style="width: 22px; height: 22px;"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4-Stat Metric Banner Directly Below Hero Section (Exact Match to User Screenshot) -->
+      <section class="wf-hero-stats-banner reveal-on-scroll">
+        <div class="wf-stats-grid reveal-stagger">
+          
+          <!-- Stat 1: 23+ Years -->
+          <div class="wf-stat-item">
+            <div class="wf-stat-icon-box">
+              <i data-lucide="calendar"></i>
+            </div>
+            <div class="wf-stat-number">23<span class="plus-blue">+</span></div>
+            <div class="wf-stat-label">Years of Orthopaedic Care</div>
+            <div class="wf-stat-sublabel">Serving Jamkhandi since 2003</div>
+          </div>
+
+          <!-- Stat 2: 6,00,000+ Patients -->
+          <div class="wf-stat-item">
+            <div class="wf-stat-icon-box">
+              <i data-lucide="heart-pulse"></i>
+            </div>
+            <div class="wf-stat-number">6,00,000<span class="plus-blue">+</span></div>
+            <div class="wf-stat-label">Patients Treated</div>
+            <div class="wf-stat-sublabel">Patients cared for since 2003</div>
+          </div>
+
+          <!-- Stat 3: 20,000+ Surgeries -->
+          <div class="wf-stat-item">
+            <div class="wf-stat-icon-box">
+              <i data-lucide="briefcase-medical"></i>
+            </div>
+            <div class="wf-stat-number">20,000<span class="plus-blue">+</span></div>
+            <div class="wf-stat-label">Surgeries Performed</div>
+            <div class="wf-stat-sublabel">Surgical experience across orthopaedic care</div>
+          </div>
+
+          <!-- Stat 4: 24/7 Emergency -->
+          <div class="wf-stat-item">
+            <div class="wf-stat-icon-box">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="wf-stat-number">24<span class="plus-blue">/7</span></div>
+            <div class="wf-stat-label">Emergency Care</div>
+            <div class="wf-stat-sublabel">Round-the-clock trauma support</div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- 3. Services / Specialties Section -->
+      <section class="services-section" id="services">
+        <div class="section-bg-beacon blue-glow"></div>
+        <div class="section-header-center" style="text-align: center; margin-bottom: 32px;">
+          <span class="section-tag">MEDICAL SPECIALITIES</span>
+          <h2 class="section-title">Orthopaedic care for the conditions that affect your movement</h2>
+          <p class="section-description" style="max-width: 640px; margin: 0 auto;">
+            From everyday joint problems and sports injuries to complex trauma and surgical care, our specialists
+            provide focused treatment based on your condition and individual needs.
+          </p>
+        </div>
+
+        <div class="specialties-grid" id="specialtiesGrid">
+          <!-- Card 1: Orthopaedics -->
+          <div class="specialty-card">
+            <div class="specialty-icon-wrapper">
+              <img src="/images/orthopedics.png" alt="Orthopaedics" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Orthopaedics</h3>
+            <p class="specialty-card-desc">
+              Care for bone, joint and muscle conditions, including fractures, joint pain and other problems that affect
+              movement.
+            </p>
+            <a href="specialties/orthopaedics.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card 2: Trauma Care -->
+          <div class="specialty-card featured-card">
+            <div class="specialty-badge">POPULAR</div>
+            <div class="specialty-icon-wrapper">
+              <img src="/images/trauma-care.png" alt="Trauma Care" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Trauma Care</h3>
+            <p class="specialty-card-desc">
+              Emergency care for fractures, dislocations and other orthopaedic injuries following accidents or trauma.
+            </p>
+            <a href="specialties/trauma-care.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card 3: Neurosurgery -->
+          <div class="specialty-card">
+            <div class="specialty-icon-wrapper">
+              <img src="/images/neurosurgery.png" alt="Neurosurgery" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Neurosurgery</h3>
+            <p class="specialty-card-desc">
+              Specialist care for conditions affecting the brain, spine and nerves, including selected spinal and
+              nerve-related conditions.
+            </p>
+            <a href="specialties/neurosurgery.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card 4: Joint Replacement -->
+          <div class="specialty-card">
+            <div class="specialty-icon-wrapper">
+              <img src="/images/joint-replacement.png" alt="Joint Replacement" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Joint Replacement</h3>
+            <p class="specialty-card-desc">
+              Knee, hip and shoulder replacement for patients whose joint damage or pain significantly affects everyday
+              movement.
+            </p>
+            <a href="specialties/joint-replacement.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card 5: Arthroscopy -->
+          <div class="specialty-card">
+            <div class="specialty-icon-wrapper">
+              <img src="/images/arthroscopy.png" alt="Arthroscopy" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Arthroscopy</h3>
+            <p class="specialty-card-desc">
+              Minimally invasive procedures used to diagnose and treat problems inside joints, including selected
+              ligament, meniscus and rotator cuff injuries.
+            </p>
+            <a href="specialties/arthroscopy.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card 6: Physiotherapy -->
+          <div class="specialty-card">
+            <div class="specialty-icon-wrapper">
+              <img src="/images/physiotherapy.png" alt="Physiotherapy" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Physiotherapy</h3>
+            <p class="specialty-card-desc">
+              Physiotherapy focused on improving strength, movement, balance and mobility before or after orthopaedic
+              treatment.
+            </p>
+            <a href="specialties/physiotherapy.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card 7: Sports Medicine (hidden by default) -->
+          <div class="specialty-card hidden-card">
+            <div class="specialty-icon-wrapper">
+              <img src="/images/sports-medicine.png" alt="Sports Medicine" class="specialty-icon"
+                style="width: 40px; height: 40px; object-fit: contain;">
+            </div>
+            <h3 class="specialty-card-title">Sports Medicine</h3>
+            <p class="specialty-card-desc">
+              Dedicated care for athletic injuries, tendonitis, ligament tears, and specialized athletic performance
+              recovery.
+            </p>
+            <a href="specialties/sports-injury-clinic.html" class="specialty-read-more-btn">
+              <span>Read More</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 28px;">
+          <button id="viewMoreSpecialties" type="button" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.9rem;">
+            <span>View More Specialties</span>
+            <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- 4. Hospital Facilities Section (Simple & Aesthetic Minimalist Design) -->
+      <section class="aesthetic-facilities-section" id="facilities">
+        <div class="aesthetic-facilities-container">
+          
+          <!-- Section Header -->
+          <div class="aesthetic-header reveal-on-scroll">
+            <span class="aesthetic-eyebrow">OUR FACILITIES</span>
+            <h2 class="aesthetic-title">Hospital Infrastructure & Surgical Suites</h2>
+            <p class="aesthetic-subtitle">
+              Sanadi Orthopaedic Hospital combines advanced surgical suites, continuous critical care, and dedicated rehabilitation units designed for comfort and precision recovery.
+            </p>
+          </div>
+
+          <!-- 3x2 Clean Cards Grid -->
+          <div class="aesthetic-grid reveal-on-scroll reveal-stagger">
+            
+            <!-- Card 1 -->
+            <a href="/facilities.html#modular-ot" class="aesthetic-card">
+              <div class="aesthetic-icon-box icon-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M12 8v8"/>
+                  <path d="M8 12h8"/>
+                </svg>
+              </div>
+              <h3 class="aesthetic-card-title">Modular Operation OTs</h3>
+              <p class="aesthetic-card-desc">
+                Ultra-sterile vertical laminar airflow HEPA suites equipped for robotic joint replacements and complex surgeries.
+              </p>
+              <div class="aesthetic-card-footer">
+                <span class="aesthetic-link-text">Learn More</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="/facilities.html#icu" class="aesthetic-card">
+              <div class="aesthetic-icon-box icon-mint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <h3 class="aesthetic-card-title">24/7 Critical Care ICU</h3>
+              <p class="aesthetic-card-desc">
+                Continuous multipara telemetry monitoring, high-grade respiratory ventilators, and 24/7 ICU specialists.
+              </p>
+              <div class="aesthetic-card-footer">
+                <span class="aesthetic-link-text">Learn More</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="/facilities.html#surgical-infrastructure" class="aesthetic-card">
+              <div class="aesthetic-icon-box icon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7V5a2 2 0 0 1 2-2h2"/>
+                  <path d="M17 3h2a2 2 0 0 1 2 2v2"/>
+                  <path d="M21 17v2a2 2 0 0 1-2 2h-2"/>
+                  <path d="M7 21H5a2 2 0 0 1-2-2v-2"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 class="aesthetic-card-title">Digital Surgical Suite</h3>
+              <p class="aesthetic-card-desc">
+                Real-time C-Arm digital fluoroscopy, micro-endoscopic spinal suites, and orthopaedic power instruments.
+              </p>
+              <div class="aesthetic-card-footer">
+                <span class="aesthetic-link-text">Learn More</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="/facilities.html#emergency-care" class="aesthetic-card">
+              <div class="aesthetic-icon-box icon-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 17h4"/>
+                  <path d="M12 15v4"/>
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/>
+                  <circle cx="7" cy="17" r="2"/>
+                  <circle cx="17" cy="17" r="2"/>
+                </svg>
+              </div>
+              <h3 class="aesthetic-card-title">24×7 Emergency & Trauma</h3>
+              <p class="aesthetic-card-desc">
+                Round-the-clock emergency triage, rapid fracture reduction, dislocation care, and surgical team standby.
+              </p>
+              <div class="aesthetic-card-footer">
+                <span class="aesthetic-link-text">Learn More</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="/facilities.html#patient-care" class="aesthetic-card">
+              <div class="aesthetic-icon-box icon-rose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 4v16"/>
+                  <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
+                  <path d="M2 17h20"/>
+                  <path d="M6 8v9"/>
+                  <circle cx="9" cy="11" r="2"/>
+                </svg>
+              </div>
+              <h3 class="aesthetic-card-title">Diagnostics & 40 Beds</h3>
+              <p class="aesthetic-card-desc">
+                Low-dose digital X-ray diagnostics, clinical laboratory, and 40 comfortable motorized inpatient recovery beds.
+              </p>
+              <div class="aesthetic-card-footer">
+                <span class="aesthetic-link-text">Learn More</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="/facilities.html#physiotherapy-rehabilitation" class="aesthetic-card">
+              <div class="aesthetic-icon-box icon-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12h-5l-2.5 7-4-14L4 12H2"/>
+                </svg>
+              </div>
+              <h3 class="aesthetic-card-title">Physiotherapy & Rehab</h3>
+              <p class="aesthetic-card-desc">
+                Surgeon-guided post-op physical therapy, gait retraining, parallel walking bars, and athletic rehabilitation.
+              </p>
+              <div class="aesthetic-card-footer">
+                <span class="aesthetic-link-text">Learn More</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- Why Patients Trust Us Section - Gallery4 Carousel -->
+      <section class="why-trust-carousel-section" id="why-trust">
+        <div class="why-trust-carousel-container">
+          <!-- Section Header -->
+          <div class="why-trust-carousel-header">
+            <span class="why-trust-carousel-eyebrow">WHY PATIENTS CHOOSE SANADI</span>
+            <h2 class="why-trust-carousel-title">Specialized care, with the patient at the centre.</h2>
+            <p class="why-trust-carousel-description">
+              At Sanadi Orthopaedic Hospital, our focus is straightforward: understand your condition clearly, recommend
+              the right treatment and support you through recovery.
+            </p>
+          </div>
+
+          <!-- Carousel -->
+          <div class="trust-carousel-wrapper">
+            <div class="trust-carousel-viewport" id="trustCarouselViewport">
+              <div class="trust-carousel-container" id="trustCarouselContainer">
+                <!-- Card 1: Experienced Orthopaedic Care -->
+                <div class="trust-carousel-slide">
+                  <div class="trust-carousel-card">
+                    <img src="/images/trust-ortho-care.png" alt="Senior Indian orthopaedic doctor reviewing X-ray scan"
+                      class="trust-carousel-image">
+                    <div class="trust-carousel-overlay"></div>
+                    <div class="trust-carousel-content">
+                      <h3 class="trust-carousel-card-title">Experienced Orthopaedic Care</h3>
+                      <p class="trust-carousel-card-description">Years of experience treating joint, bone, spine and
+                        injury-related conditions.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Clear Treatment Planning -->
+                <div class="trust-carousel-slide">
+                  <div class="trust-carousel-card">
+                    <img src="/images/trust-treatment-plan.png"
+                      alt="Indian doctor explaining knee joint anatomical model to patient"
+                      class="trust-carousel-image">
+                    <div class="trust-carousel-overlay"></div>
+                    <div class="trust-carousel-content">
+                      <h3 class="trust-carousel-card-title">Clear Treatment Planning</h3>
+                      <p class="trust-carousel-card-description">Your diagnosis, treatment options and expected recovery
+                        are explained before you proceed.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: Specialist-Led Care -->
+                <div class="trust-carousel-slide">
+                  <div class="trust-carousel-card">
+                    <img src="/images/trust-specialist-care.png"
+                      alt="Indian orthopaedic specialist in patient consultation" class="trust-carousel-image">
+                    <div class="trust-carousel-overlay"></div>
+                    <div class="trust-carousel-content">
+                      <h3 class="trust-carousel-card-title">Specialist-Led Care</h3>
+                      <p class="trust-carousel-card-description">Your treatment is guided by the appropriate specialist
+                        from consultation through follow-up.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4: Care Under One Roof -->
+                <div class="trust-carousel-slide">
+                  <div class="trust-carousel-card">
+                    <img src="/images/editorial-inpatient-room.png" alt="Inpatient hospital room facility with bed"
+                      class="trust-carousel-image">
+                    <div class="trust-carousel-overlay"></div>
+                    <div class="trust-carousel-content">
+                      <h3 class="trust-carousel-card-title">Care Under One Roof</h3>
+                      <p class="trust-carousel-card-description">Consultation, diagnostics, surgery, inpatient care and
+                        rehabilitation are available within the hospital.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5: Emergency & Trauma Support -->
+                <div class="trust-carousel-slide">
+                  <div class="trust-carousel-card">
+                    <img src="/images/editorial-ot-hero.png" alt="Advanced modular surgical operation theater"
+                      class="trust-carousel-image">
+                    <div class="trust-carousel-overlay"></div>
+                    <div class="trust-carousel-content">
+                      <h3 class="trust-carousel-card-title">Emergency & Trauma Support</h3>
+                      <p class="trust-carousel-card-description">Round-the-clock support for orthopaedic injuries and
+                        trauma.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6: Focused on Recovery -->
+                <div class="trust-carousel-slide">
+                  <div class="trust-carousel-card">
+                    <img src="/images/editorial-physio-recovery.png"
+                      alt="Indian physiotherapist guiding patient in parallel walking rehabilitation bars"
+                      class="trust-carousel-image">
+                    <div class="trust-carousel-overlay"></div>
+                    <div class="trust-carousel-content">
+                      <h3 class="trust-carousel-card-title">Focused on Recovery</h3>
+                      <p class="trust-carousel-card-description">Treatment does not stop with the procedure. Recovery
+                        and rehabilitation are part of the care journey.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="trust-carousel-prev" id="trustCarouselPrev" aria-label="Previous slide">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="trust-carousel-next" id="trustCarouselNext" aria-label="Next slide">
+              <i data-lucide="chevron-right"></i>
+            </button>
+
+            <!-- Pagination Dots -->
+            <div class="trust-carousel-dots" id="trustCarouselDots"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hospital Infrastructure Showcase Section -->
+      <section class="about-building-showcase-section" id="about-building">
+        <div class="about-building-container">
+          <div class="about-building-image-wrap">
+            <img src="/IMG_8896.PNG" alt="Sanadi Orthopaedic Hospital Building Facade Jamkhandi"
+              class="about-building-img">
+          </div>
+          <div class="about-building-content">
+            <span class="section-tag">ABOUT OUR HOSPITAL</span>
+            <h2 class="section-title">23 years of orthopaedic care in Jamkhandi</h2>
+            <p class="section-description" style="margin-bottom: 20px;">
+              Established in 2003 by Dr. G. N. Sanadi, Sanadi Orthopaedic Hospital provides specialized care for joint,
+              bone, spine and injury-related conditions. Our hospital brings consultation, diagnostics, surgery,
+              inpatient care and rehabilitation together in one place.
+            </p>
+            <div class="building-highlights-grid">
+              <div class="building-stat-chip">
+                <i data-lucide="award" style="width: 20px; height: 20px; color: #2563EB;"></i>
+                <div>
+                  <strong>23+ Years</strong>
+                  <span>Established in 2003</span>
+                </div>
+              </div>
+              <div class="building-stat-chip">
+                <i data-lucide="users" style="width: 20px; height: 20px; color: #0F6E4F;"></i>
+                <div>
+                  <strong>6,00,000+</strong>
+                  <span>Patients Treated</span>
+                </div>
+              </div>
+              <div class="building-stat-chip">
+                <i data-lucide="activity" style="width: 20px; height: 20px; color: #2563EB;"></i>
+                <div>
+                  <strong>20,000+</strong>
+                  <span>Surgeries</span>
+                </div>
+              </div>
+              <div class="building-stat-chip">
+                <i data-lucide="shield-check" style="width: 20px; height: 20px; color: #0F6E4F;"></i>
+                <div>
+                  <strong>40 Beds</strong>
+                  <span>Inpatient Capacity</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 24px;">
+              <a href="/about.html" class="btn btn-primary">
+                <span>About Our Hospital</span>
+                <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- 5. Doctors / Specialists Section -->
+      <section class="doctors-section" id="doctors">
+        <div class="section-bg-beacon blue-glow"></div>
+        <div class="section-header-center" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">ORTHOPEDIC SPECIALISTS</span>
+          <h2 class="section-title">Meet the Specialists Behind Your Care</h2>
+          <p class="section-description" style="max-width: 600px; margin: 0 auto;">
+            Our team includes experienced specialists across orthopaedics, neurosurgery, anaesthesia and supporting
+            areas of patient care.
+          </p>
+        </div>
+
+        <!-- Fluid Horizontal Slider Wrapper -->
+        <div class="doctor-slider-wrapper" id="doctorSliderWrapper">
+          <button class="slider-arrow-btn arrow-prev" id="docSliderPrev" aria-label="Previous Specialists">
+            <i data-lucide="chevron-left" style="width: 24px; height: 24px;"></i>
+          </button>
+
+          <div class="doctor-slider-track" id="doctorSliderTrack">
+            <!-- Dynamic Specialist Cards rendered via JavaScript -->
+          </div>
+
+          <button class="slider-arrow-btn arrow-next" id="docSliderNext" aria-label="Next Specialists">
+            <i data-lucide="chevron-right" style="width: 24px; height: 24px;"></i>
+          </button>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <!-- 5. Patient Reviews Section (White Background Infinite Marquee Carousel) -->
+      <section class="reviews-section" id="reviews">
+        <div class="reviews-header-center">
+          <span class="section-tag">PATIENT REVIEWS</span>
+          <h2 class="section-title">Hear from Our Patients</h2>
+          <p class="section-description" style="max-width: 620px; margin: 0 auto;">
+            Hear from patients about their experience at Sanadi Orthopaedic Hospital.
+          </p>
+        </div>
+
+        <div class="carousel-outer-wrapper">
+          <!-- Row 1: Scroll Left -->
+          <div class="carousel-marquee-track scroll-left">
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The knee replacement completely changed my life. I was back walking comfortably in just three weeks. The
+                care at Sanadi Orthopaedic Hospital was exceptional.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Priya Kapoor</div>
+                  <div class="user-role">Total Knee Replacement Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Spine treatment restored my mobility. The medical and rehabilitation team guided me back to my everyday
+                activities smoothly.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Rohit Verma</div>
+                  <div class="user-role">Spine Care Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                My ACL reconstruction went so smoothly. Within four months I returned to regular physical activity with
+                confidence and stability.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Anjali Mehta</div>
+                  <div class="user-role">Sports Medicine Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The post-op physical therapy team at Sanadi Orthopaedic Hospital is outstanding. Every step of my
+                recovery was guided with care.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Siddharth Rao</div>
+                  <div class="user-role">Hip Arthroscopy Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Experienced orthopaedic specialists and excellent hospital facilities. I recommend Sanadi Orthopaedic
+                Hospital to anyone dealing with joint pain.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Nisha Sharma</div>
+                  <div class="user-role">Shoulder Reconstruction Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DUPLICATED CARDS -->
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The knee replacement completely changed my life. I was back walking comfortably in just three weeks. The
+                care at Sanadi Orthopaedic Hospital was exceptional.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Priya Kapoor</div>
+                  <div class="user-role">Total Knee Replacement Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Spine treatment restored my mobility. The medical and rehabilitation team guided me back to my everyday
+                activities smoothly.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Rohit Verma</div>
+                  <div class="user-role">Spine Care Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                My ACL reconstruction went so smoothly. Within four months I returned to regular physical activity with
+                confidence and stability.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Anjali Mehta</div>
+                  <div class="user-role">Sports Medicine Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The post-op physical therapy team at Sanadi Orthopaedic Hospital is outstanding. Every step of my
+                recovery was guided with care.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Siddharth Rao</div>
+                  <div class="user-role">Hip Arthroscopy Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Experienced orthopaedic specialists and excellent hospital facilities. I recommend Sanadi Orthopaedic
+                Hospital to anyone dealing with joint pain.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Nisha Sharma</div>
+                  <div class="user-role">Shoulder Reconstruction Patient</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Scroll Right -->
+          <div class="carousel-marquee-track scroll-right" style="margin-top: 20px;">
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Experienced orthopaedic specialists and excellent hospital facilities. I recommend Sanadi Orthopaedic
+                Hospital to anyone dealing with joint pain.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Nisha Sharma</div>
+                  <div class="user-role">Shoulder Reconstruction Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The post-op physical therapy team at Sanadi Orthopaedic Hospital is outstanding. Every step of my
+                recovery was guided with care.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Siddharth Rao</div>
+                  <div class="user-role">Hip Arthroscopy Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                My ACL reconstruction went so smoothly. Within four months I returned to regular physical activity with
+                confidence and stability.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Anjali Mehta</div>
+                  <div class="user-role">Sports Medicine Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Spine treatment restored my mobility. The medical and rehabilitation team guided me back to my everyday
+                activities smoothly.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Rohit Verma</div>
+                  <div class="user-role">Spine Care Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The knee replacement completely changed my life. I was back walking comfortably in just three weeks. The
+                care at Sanadi Orthopaedic Hospital was exceptional.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Priya Kapoor</div>
+                  <div class="user-role">Total Knee Replacement Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DUPLICATED CARDS -->
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Experienced orthopaedic specialists and excellent hospital facilities. I recommend Sanadi Orthopaedic
+                Hospital to anyone dealing with joint pain.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Nisha Sharma</div>
+                  <div class="user-role">Shoulder Reconstruction Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The post-op physical therapy team at Sanadi Orthopaedic Hospital is outstanding. Every step of my
+                recovery was guided with care.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Siddharth Rao</div>
+                  <div class="user-role">Hip Arthroscopy Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                My ACL reconstruction went so smoothly. Within four months I returned to regular physical activity with
+                confidence and stability.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Anjali Mehta</div>
+                  <div class="user-role">Sports Medicine Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                Spine treatment restored my mobility. The medical and rehabilitation team guided me back to my everyday
+                activities smoothly.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Rohit Verma</div>
+                  <div class="user-role">Spine Care Patient</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card-item">
+              <p class="testimonial-quote">
+                The knee replacement completely changed my life. I was back walking comfortably in just three weeks. The
+                care at Sanadi Orthopaedic Hospital was exceptional.
+              </p>
+              <div class="testimonial-user">
+                <div>
+                  <div class="user-name">Priya Kapoor</div>
+                  <div class="user-role">Total Knee Replacement Patient</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="faq-container-grid">
+
+          <!-- Left Column: Image Card Only -->
+          <div class="faq-image-col">
+            <div class="faq-image-card">
+              <img src="/images/indian-doctor-consultation.png"
+                alt="Sanadi Orthopaedic Hospital Doctor Patient Consultation" class="faq-img">
+            </div>
+          </div>
+
+          <!-- Right Column: FAQ Content & Accordion (Inline layout, no outer card box) -->
+          <div class="faq-content-col">
+            <div class="faq-header">
+              <span class="section-tag">PATIENT QUESTIONS</span>
+              <h2 class="section-title faq-title">Questions Patients Often Ask</h2>
+            </div>
+
+            <div class="faq-accordion-list">
+              <!-- Q1 -->
+              <details class="faq-item" name="faq-accordion">
+                <summary class="faq-question">
+                  <span class="faq-question-text">Do I need a referral to consult a specialist at Sanadi Orthopaedic
+                    Hospital?</span>
+                  <span class="faq-icon-wrapper">
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path class="v-line" d="M12 5v14" />
+                      <path class="h-line" d="M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="faq-answer">
+                  <p>No. You can book a direct consultation with any of our orthopaedic, trauma, or neurosurgery
+                    specialists without a referral.</p>
+                </div>
+              </details>
+
+              <!-- Q2 -->
+              <details class="faq-item" name="faq-accordion">
+                <summary class="faq-question">
+                  <span class="faq-question-text">Is robotic-assisted joint replacement suitable for every
+                    patient?</span>
+                  <span class="faq-icon-wrapper">
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path class="v-line" d="M12 5v14" />
+                      <path class="h-line" d="M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Not necessarily. The appropriate treatment depends on your joint condition, medical history and
+                    assessment by the treating specialist.</p>
+                </div>
+              </details>
+
+              <!-- Q3 -->
+              <details class="faq-item" name="faq-accordion">
+                <summary class="faq-question">
+                  <span class="faq-question-text">What happens if I arrive with a trauma emergency outside OPD
+                    hours?</span>
+                  <span class="faq-icon-wrapper">
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path class="v-line" d="M12 5v14" />
+                      <path class="h-line" d="M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Our emergency and trauma care team is available 24×7 for fracture stabilization, polytrauma
+                    response, and emergency surgery — no appointment needed.</p>
+                </div>
+              </details>
+
+              <!-- Q4 -->
+              <details class="faq-item" name="faq-accordion">
+                <summary class="faq-question">
+                  <span class="faq-question-text">When can I start walking after joint replacement?</span>
+                  <span class="faq-icon-wrapper">
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path class="v-line" d="M12 5v14" />
+                      <path class="h-line" d="M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="faq-answer">
+                  <p>The timing varies from patient to patient and depends on the type of surgery, overall health and
+                    the treating surgeon's advice.</p>
+                </div>
+              </details>
+
+              <!-- Q5 -->
+              <details class="faq-item" name="faq-accordion">
+                <summary class="faq-question">
+                  <span class="faq-question-text">How can I book an appointment?</span>
+                  <span class="faq-icon-wrapper">
+                    <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path class="v-line" d="M12 5v14" />
+                      <path class="h-line" d="M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="faq-answer">
+                  <p>You can book an appointment through the hospital's appointment process or by contacting the
+                    hospital directly.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 7. Standalone Contact Us Section -->
+      <section class="contact-us-section" id="contact">
+        <div class="section-header-center" style="text-align: center; margin-bottom: 44px;">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Contact Sanadi Orthopaedic Hospital</h2>
+          <p class="section-description" style="max-width: 640px; margin: 0 auto;">
+            Have a question or need to schedule an orthopaedic consultation? Contact our medical desk or send an inquiry
+            below.
+          </p>
+        </div>
+
+        <div class="contact-section-grid">
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="contact-icon-box blue">
+                <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+              </div>
+              <div>
+                <h4 class="contact-card-title">Hospital Address</h4>
+                <p class="contact-card-text">Sanadi Orthopaedic Hospital, Main Road, Jamkhandi, Karnataka</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon-box mint">
+                <i data-lucide="phone-call" style="width: 24px; height: 24px;"></i>
+              </div>
+              <div>
+                <h4 class="contact-card-title">24×7 Emergency Helpline</h4>
+                <p class="contact-card-text">
+                  Direct Line: <a href="tel:+919845000000" class="contact-link">+91 98450 00000</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon-box blue">
+                <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+              </div>
+              <div>
+                <h4 class="contact-card-title">Email & Appointments</h4>
+                <p class="contact-card-text">
+                  <a href="mailto:care@sanadihospital.com" class="contact-link">care@sanadihospital.com</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon-box mint">
+                <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+              </div>
+              <div>
+                <h4 class="contact-card-title">OPD & Clinical Hours</h4>
+                <p class="contact-card-text">
+                  Mon - Sat: 9:00 AM - 9:00 PM<br>
+                  <strong style="color: #059669;">24×7 Emergency Trauma Services Always Open</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Premium Contact Form -->
+          <div class="contact-form-card">
+            <div class="form-card-header">
+              <span class="form-badge">
+                <i data-lucide="zap" style="width: 14px; height: 14px; color: #2563EB;"></i>
+                QUICK APPOINTMENT DESK
+              </span>
+              <h3 class="form-card-heading">Send Inquiry / Book Appointment</h3>
+              <p class="form-card-subtext">Fill in your details below. Our medical desk will reach out to you shortly.
+              </p>
+            </div>
+
+            <!-- WhatsApp Direct Integration Service Request Form -->
+            <form id="contactForm" novalidate>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="fullName">Full Name <span style="color: #EF4444;">*</span></label>
+                  <div class="input-with-icon">
+                    <i data-lucide="user" class="input-icon"></i>
+                    <input type="text" id="fullName" name="Full Name" placeholder="e.g. Rahul Sharma" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNum">Mobile Number <span style="color: #EF4444;">*</span></label>
+                  <div class="input-with-icon">
+                    <i data-lucide="phone" class="input-icon"></i>
+                    <input type="tel" id="phoneNum" name="Mobile Number" placeholder="e.g. 9876543210" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="emailAddr">Email Address</label>
+                  <div class="input-with-icon">
+                    <i data-lucide="mail" class="input-icon"></i>
+                    <input type="email" id="emailAddr" name="Email Address" placeholder="e.g. rahul@example.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="preferredDate">Preferred Date</label>
+                  <div class="input-with-icon">
+                    <i data-lucide="calendar" class="input-icon"></i>
+                    <input type="date" id="preferredDate" name="Preferred Date">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="specialtySelect">Select Service <span style="color: #EF4444;">*</span></label>
+                <div class="input-with-icon">
+                  <i data-lucide="activity" class="input-icon"></i>
+                  <select id="specialtySelect" name="Required Specialty" required>
+                    <option value="">Select Service / Specialty</option>
+                    <option value="Orthopaedics & Fracture Care">Orthopaedics & Fracture Care</option>
+                    <option value="24x7 Emergency Trauma Care">24x7 Emergency Trauma Care</option>
+                    <option value="Neurosurgery & Spine Care">Neurosurgery & Spine Care</option>
+                    <option value="Joint Replacement Surgery">Joint Replacement Surgery</option>
+                    <option value="Arthroscopy & Keyhole Surgery">Arthroscopy & Keyhole Surgery</option>
+                    <option value="Physiotherapy & Rehabilitation">Physiotherapy & Rehabilitation</option>
+                    <option value="Sports Medicine">Sports Medicine</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message / Requirements <span style="color: #EF4444;">*</span></label>
+                <div class="input-with-icon textarea-icon-wrap">
+                  <i data-lucide="message-square" class="input-icon textarea-icon"></i>
+                  <textarea id="message" name="Patient Message" rows="3" placeholder="Describe your requirements or medical query..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp-submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="whatsapp-btn-icon"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+                <span>Submit Request</span>
+              </button>
+            </form>
+
+            <div id="formSuccessMessage" style="display: none;"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 7. Footer & Contact Information -->
+    <footer class="site-footer">
+      <div class="footer-content-grid">
+        <div>
+          <a href="/index.html" class="brand-logo">
+            <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
+            <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+          </a>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#services">Specialties</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#doctors">Surgeons</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="#contact">Contact Clinic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Our Specialities</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services">Orthopaedics</a></li>
+            <li><a href="#services">Trauma Care</a></li>
+            <li><a href="#services">Neurosurgery</a></li>
+            <li><a href="#services">Joint Replacement</a></li>
+            <li><a href="#services">Arthroscopy</a></li>
+            <li><a href="#services">Physiotherapy</a></li>
+            <li><a href="#services">Sports Medicine</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin"
+                style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>Sanadi Orthopaedic Hospital, Main Road, Jamkhandi</span>
+            </li>
+            <li>
+              <i data-lucide="phone"
+                style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>Emergency 24x7: <a href="tel:+919845000000" style="color: #2563EB; font-weight: 700;">+91 98450
+                  00000</a></span>
+            </li>
+            <li>
+              <i data-lucide="mail"
+                style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span><a href="mailto:care@sanadihospital.com">care@sanadihospital.com</a></span>
+            </li>
+            <li>
+              <i data-lucide="clock"
+                style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>OPD: Mon - Sat (9:00 AM - 9:00 PM)<br><strong style="color: #059669;">24x7 Emergency
+                  Services</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sanadi Orthopaedic Hospital. Established in 2003 by Dr. G. N. Sanadi. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toast">
+    <i data-lucide="info" style="width: 18px; height: 18px; color: var(--color-lime-accent);"></i>
+    <span id="toastMessage">Action completed successfully.</span>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

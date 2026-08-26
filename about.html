@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Sanadi Orthopaedic Hospital Jamkhandi</title>
+  <meta name="description" content="Established in Jamkhandi in 2003 by Dr. G. N. Sanadi, Sanadi Orthopaedic Hospital is dedicated to focused orthopaedic care, surgical excellence, and patient recovery.">
+  
+  <!-- Preconnect & Google Fonts Bundle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="editorial-about-page">
+
+  <!-- Main Centered Container Wrapper -->
+  <div class="site-container">
+
+    <!-- 1. Sticky Top Navigation -->
+    <header class="site-header" id="header">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <!-- Hospital Logo -->
+        <a href="/index.html" class="brand-logo">
+          <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
+          <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html" class="nav-link">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="javascript:void(0)" class="nav-link" onclick="event.preventDefault()">Specialties <i data-lucide="chevron-down" style="width: 14px; height: 14px; margin-left: 4px;"></i></a>
+            <div class="dropdown-menu">
+              <a href="specialties/orthopaedics.html" class="dropdown-item">Orthopaedics</a>
+              <a href="specialties/trauma-care.html" class="dropdown-item">Trauma Care</a>
+              <a href="specialties/neurosurgery.html" class="dropdown-item">Neurosurgery</a>
+              <a href="specialties/joint-replacement.html" class="dropdown-item">Joint Replacement</a>
+              <a href="specialties/arthroscopy.html" class="dropdown-item">Arthroscopy</a>
+              <a href="specialties/physiotherapy.html" class="dropdown-item">Physiotherapy</a>
+              <a href="specialties/sports-injury-clinic.html" class="dropdown-item">Sports Injury Clinic</a>
+            </div>
+          </li>
+          <li><a href="/facilities.html" class="nav-link">Facilities</a></li>
+          <li><a href="/index.html#doctors" class="nav-link">Surgeons</a></li>
+          <li><a href="/about.html" class="nav-link active">About Us</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="nav-actions">
+          <a href="/index.html#contact" class="btn btn-outline">Contact us</a>
+          <a href="/index.html#contact" class="btn btn-dark">Book now</a>
+          <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle Menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="about-editorial-main">
+      
+      <!-- 01 — OPENING / IDENTITY (ELEGANT HERO WITH VISUAL EFFECTS & ANIMATIONS) -->
+      <section class="about-hero-editorial about-hero-redesigned" id="hero">
+        
+        <!-- WebGL Silk Shader Animated Background Canvas -->
+        <canvas id="heroShaderCanvas" class="shader-background-canvas" aria-hidden="true"></canvas>
+
+        <!-- Ambient Glowing Background Mesh & Heartbeat Animation -->
+        <div class="about-hero-bg-glow" aria-hidden="true">
+          <div class="hero-glow-sphere glow-blue"></div>
+          <div class="hero-glow-sphere glow-cyan"></div>
+          <svg class="hero-pulse-ecg-bg" viewBox="0 0 1200 150" fill="none">
+            <path d="M0 75 H350 L365 50 L380 100 L395 20 L410 130 L425 75 H750 L765 55 L780 95 L795 30 L810 120 L825 75 H1200" stroke="url(#heroPulseGrad)" stroke-width="2.5" stroke-dasharray="800" class="hero-ecg-path" />
+            <defs>
+              <linearGradient id="heroPulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2563EB" stop-opacity="0.1"/>
+                <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#2563EB" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="about-hero-editorial-centered">
+          <!-- Glassmorphism Live Eyebrow Badge -->
+          <div class="about-eyebrow-wrapper">
+            <span class="about-eyebrow-glass">
+              <span class="dot-beacon green"></span>
+              <span class="eyebrow-text">OUR BEGINNING • EST. 2003</span>
+            </span>
+          </div>
+
+          <!-- Hero Headline with Gradient Typography & Light Aura -->
+          <h1 class="about-hero-editorial-title hero-title-gradient">
+            Built in Jamkhandi. <span class="highlight-text-blue">Growing with the Community.</span>
+          </h1>
+          
+          <div class="about-hero-story-block">
+            <p class="about-hero-editorial-lead">
+              Sanadi Orthopaedic Hospital began in Jamkhandi in 2003 with a simple purpose — to make dependable orthopaedic care available closer to home. Over the years, the hospital has grown in experience, facilities and clinical expertise, while remaining connected to the people and communities it serves.
+            </p>
+            <p class="about-hero-editorial-subtext">
+              From everyday bone and joint conditions to emergency trauma management, our focus has remained fixed on providing clear medical guidance, patient comfort, and trustworthy care for families across Jamkhandi and North Karnataka.
+            </p>
+          </div>
+
+          <!-- Interactive 4-Column Feature Stat Cards Matrix -->
+          <div class="about-hero-cards-grid">
+            <div class="about-hero-card">
+              <div class="hero-card-icon-box blue-theme">
+                <i data-lucide="calendar" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="hero-card-content">
+                <span class="hero-card-label">ESTABLISHED</span>
+                <h3 class="hero-card-val">2003</h3>
+                <span class="hero-card-sub">20+ Years Excellence</span>
+              </div>
+            </div>
+
+            <div class="about-hero-card">
+              <div class="hero-card-icon-box cyan-theme">
+                <i data-lucide="user-check" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="hero-card-content">
+                <span class="hero-card-label">FOUNDER & SURGEON</span>
+                <h3 class="hero-card-val">Dr. G. N. Sanadi</h3>
+                <span class="hero-card-sub">MBBS, D.Ortho, M.Ch</span>
+              </div>
+            </div>
+
+            <div class="about-hero-card">
+              <div class="hero-card-icon-box teal-theme">
+                <i data-lucide="activity" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="hero-card-content">
+                <span class="hero-card-label">CLINICAL FOCUS</span>
+                <h3 class="hero-card-val">Focused Care</h3>
+                <span class="hero-card-sub">Sub-specialty Orthopaedics</span>
+              </div>
+            </div>
+
+            <div class="about-hero-card">
+              <div class="hero-card-icon-box indigo-theme">
+                <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="hero-card-content">
+                <span class="hero-card-label">LOCATION</span>
+                <h3 class="hero-card-val">Jamkhandi</h3>
+                <span class="hero-card-sub">Karnataka, India</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ACETERNITY STYLED VERTICAL TIMELINE NARRATIVE -->
+      <section class="aceternity-timeline-section about-reveal-section" id="about-timeline">
+        
+        <!-- Section Header Above Timeline -->
+        <div class="timeline-section-header section-header-center">
+          <span class="section-tag">OUR JOURNEY</span>
+          <h2 class="section-title">Two Decades of Dedicated Care</h2>
+          <p class="section-description" style="max-width: 620px; margin: 0 auto;">
+            From our founding in 2003 to our modern hospital facility today, explore the evolution of Sanadi Orthopaedic Hospital.
+          </p>
+        </div>
+
+        <div class="aceternity-timeline-container">
+          
+          <!-- Sticky Beam Track Line -->
+          <div class="timeline-beam-track" id="timeline-beam-track">
+            <div class="timeline-beam-fill" id="timeline-beam-fill"></div>
+          </div>
+
+          <div class="timeline-entries-wrapper">
+
+            <!-- ENTRY 1: 2003 — ORIGIN -->
+            <div class="timeline-entry" id="origin">
+              <div class="timeline-left-col">
+                <div class="timeline-node-marker"></div>
+                <div class="timeline-sticky-milestone">
+                  <span class="milestone-badge">OUR ORIGIN</span>
+                  <h3 class="milestone-year font-heading">2003</h3>
+                </div>
+              </div>
+
+              <div class="timeline-right-col">
+                <div class="timeline-content-card">
+                  <h2 class="timeline-entry-heading">Where it began.</h2>
+                  <p class="timeline-entry-lead">
+                    In 2003, Dr. G. N. Sanadi started the hospital with a focus on orthopaedic care. What began as a commitment to serve patients in Jamkhandi has grown into a hospital caring for people from Jamkhandi, Bagalkot and nearby communities. The journey has been shaped by the needs of the people who come here — from those seeking treatment for an injury to patients working towards recovery after surgery.
+                  </p>
+
+                  <!-- Featured Side-by-Side Vision & Mission Unified Panel -->
+                  <div class="vm-unified-block">
+                    
+                    <!-- Vision Panel -->
+                    <div class="vm-panel vm-vision-panel">
+                      <div class="vm-panel-header">
+                        <div class="vm-panel-icon"><i data-lucide="eye"></i></div>
+                        <span class="vm-panel-tag">OUR VISION</span>
+                      </div>
+                      <h3 class="vm-panel-title">Good orthopaedic care, closer to home.</h3>
+                      <p class="vm-panel-sentence">
+                        Our aim is to make dependable orthopaedic care accessible to people in our region, so patients can receive the treatment, guidance and follow-up they need without always having to travel far from home.
+                      </p>
+                    </div>
+
+                    <!-- Mission Panel -->
+                    <div class="vm-panel vm-mission-panel">
+                      <div class="vm-panel-header">
+                        <div class="vm-panel-icon"><i data-lucide="target"></i></div>
+                        <span class="vm-panel-tag">OUR MISSION</span>
+                      </div>
+                      <h3 class="vm-panel-title">Patient-centred treatment & recovery.</h3>
+                      <p class="vm-panel-sentence">
+                        Providing accurate diagnosis, thoughtful treatment choices, and steady support throughout every patient's recovery journey.
+                      </p>
+                      
+                      <!-- 3 Compact Mission Tags -->
+                      <div class="vm-mission-tags">
+                        <span class="vm-tag-chip"><i data-lucide="award"></i> Focused Expertise</span>
+                        <span class="vm-tag-chip"><i data-lucide="heart"></i> Patient-First</span>
+                        <span class="vm-tag-chip"><i data-lucide="home"></i> Community Rooted</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ENTRY 2: FOUNDER — THE PERSON BEHIND THE BEGINNING -->
+            <div class="timeline-entry" id="founder">
+              <div class="timeline-left-col">
+                <div class="timeline-node-marker"></div>
+                <div class="timeline-sticky-milestone">
+                  <span class="milestone-badge">LEADERSHIP</span>
+                  <h3 class="milestone-year font-heading">Founder</h3>
+                </div>
+              </div>
+
+              <div class="timeline-right-col">
+                <div class="timeline-content-card founder-theme-card">
+                  <div class="timeline-founder-flex">
+                    <div class="founder-portrait-col">
+                      <div class="founder-portrait-frame">
+                        <img src="/images/dr-sanadi-founder.png" alt="Dr. G. N. Sanadi — Founder, Sanadi Orthopaedic Hospital">
+                      </div>
+                    </div>
+                    <div class="founder-story-col">
+                      <span class="timeline-sub-tag">THE PERSON BEHIND THE BEGINNING</span>
+                      <h2 class="timeline-entry-heading">Dr. G. N. Sanadi</h2>
+                      <p class="founder-role-title">Founder & Chief Orthopaedic Surgeon</p>
+                      
+                      <div class="founder-quote-box">
+                        <p>Dr. G. N. Sanadi established the hospital to ensure that patients in Jamkhandi and surrounding areas could access specialized orthopaedic treatment without facing the stress of long-distance travel.</p>
+                        <p class="highlight-text">His belief that every patient deserves honest advice, individual attention, and complete clinical integrity remains the standard for our medical team every day.</p>
+                      </div>
+
+                      <div class="founder-chip-strip">
+                        <span class="chip-item"><i data-lucide="award"></i> MBBS, D.Ortho, M.Ch (Orthopaedics)</span>
+                        <span class="chip-item"><i data-lucide="shield-check"></i> 20+ Years Excellence</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ENTRY 3: 2026 — AFTER TWO DECADES (HOSPITAL TODAY) -->
+            <div class="timeline-entry" id="two-decades">
+              <div class="timeline-left-col">
+                <div class="timeline-node-marker"></div>
+                <div class="timeline-sticky-milestone">
+                  <span class="milestone-badge">PRESENT DAY</span>
+                  <h3 class="milestone-year font-heading">2026</h3>
+                </div>
+              </div>
+
+              <div class="timeline-right-col">
+                <div class="timeline-content-card">
+                  <div class="timeline-decades-flex">
+                    
+                    <!-- Left Column: Hospital Photo Frame -->
+                    <div class="decades-image-col">
+                      <div class="hospital-frame-left">
+                        <img src="/images/img_8896.png" alt="Sanadi Orthopaedic Hospital Building Facade Today">
+                      </div>
+                    </div>
+
+                    <!-- Right Column: Narrative + Payoff Box + Key Stats -->
+                    <div class="decades-story-col">
+                      <span class="timeline-sub-tag">TWO DECADES LATER</span>
+                      <h2 class="timeline-entry-heading">Expanding capabilities, preserving personal care.</h2>
+                      <p class="timeline-entry-lead">
+                        Over twenty years since our doors first opened, Sanadi Orthopaedic Hospital has expanded into a multi-specialty orthopaedic center with dedicated operating theatres, ICU facilities, inpatient beds, and diagnostic support. While our facilities have grown, our core focus remains unchanged.
+                      </p>
+
+                      <!-- Standout Payoff / Closing Statement -->
+                      <div class="decades-payoff-box">
+                        <p>Today, we continue to combine modern surgical practices with personal, attentive care — ensuring every patient receives the focused treatment they need right here in Jamkhandi.</p>
+                      </div>
+
+                      <!-- Compact Key Stats Row -->
+                      <div class="decades-stats-row">
+                        <div class="decades-stat-item">
+                          <span class="stat-number" data-count-target="20" data-count-suffix="+">20+</span>
+                          <span class="stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="decades-stat-divider"></div>
+                        <div class="decades-stat-item">
+                          <span class="stat-number" data-count-target="20000" data-count-suffix="+" data-count-format="comma">20,000+</span>
+                          <span class="stat-label">Patients Cared For</span>
+                        </div>
+                        <div class="decades-stat-divider"></div>
+                        <div class="decades-stat-item">
+                          <span class="stat-number" data-count-target="6" data-count-suffix="+">6+</span>
+                          <span class="stat-label">Specialist Doctors</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- 05 — WHAT HAS REMAINED IMPORTANT -->
+      <section class="about-principles-editorial about-reveal-section">
+        <div class="principles-hero-container principles-split-layout">
+          
+          <!-- Left Column: Editorial Philosophy Text -->
+          <div class="principles-editorial-text-col">
+            <span class="about-section-tag">OUR PHILOSOPHY</span>
+            <h2 class="about-editorial-heading">Understand first. Treat thoughtfully. Stay with you through recovery.</h2>
+            <p class="about-editorial-p">
+              At Sanadi Orthopaedic Hospital, we believe meaningful healthcare begins with listening. Every patient comes with a unique condition, personal concerns, and distinct recovery goals that deserve careful attention.
+            </p>
+            <p class="about-editorial-p">
+              We take the time to explain your diagnosis clearly, discuss non-surgical and surgical options openly, and involve you and your family in deciding the right path forward.
+            </p>
+            <p class="about-editorial-p highlight-commitment">
+              Care does not end with a procedure — rehabilitation, pain management, and attentive follow-up visits are an essential part of helping you regain comfort and mobility.
+            </p>
+          </div>
+
+          <!-- Right Column: Right-Aligned Rotating Orbital Circle -->
+          <div class="principles-orbital-timeline principles-right-stage">
+            <div class="principles-orbit-container">
+              <div class="principles-center-node">
+                <div class="principles-center-pulse principles-center-pulse-1"></div>
+                <div class="principles-center-pulse principles-center-pulse-2"></div>
+                <div class="principles-center-inner">
+                  <img src="/images/logo-icon.png" alt="Sanadi Orthopaedic Hospital Logo" class="principles-logo-img">
+                </div>
+              </div>
+
+              <!-- Intermediate Middle Orbit Circle -->
+              <div class="principles-orbit-ring-mid"></div>
+
+              <!-- Rotating Outer Orbit & Nodes Wrapper -->
+              <div class="principles-orbit-rotator">
+                <div class="principles-orbit-ring-main"></div>
+
+                <div class="principles-orbital-item principles-item-1" data-id="1">
+                  <div class="principles-node-inner">
+                    <div class="principles-node-glow"></div>
+                    <div class="principles-node-icon">
+                      <span class="principles-item-number">01</span>
+                    </div>
+                    <div class="principles-node-label">FOCUSED CARE</div>
+                    <div class="principles-node-card">
+                      <h3 class="principles-card-title">FOCUSED CARE</h3>
+                      <p class="principles-card-content">Specialized focus on bone, joint, spine, and trauma treatment tailored to each patient.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="principles-orbital-item principles-item-2" data-id="2">
+                  <div class="principles-node-inner">
+                    <div class="principles-node-glow"></div>
+                    <div class="principles-node-icon">
+                      <span class="principles-item-number">02</span>
+                    </div>
+                    <div class="principles-node-label">PATIENT UNDERSTANDING</div>
+                    <div class="principles-node-card">
+                      <h3 class="principles-card-title">PATIENT UNDERSTANDING</h3>
+                      <p class="principles-card-content">Clear explanations of your diagnosis and options so you feel confident in your care.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="principles-orbital-item principles-item-3" data-id="3">
+                  <div class="principles-node-inner">
+                    <div class="principles-node-glow"></div>
+                    <div class="principles-node-icon">
+                      <span class="principles-item-number">03</span>
+                    </div>
+                    <div class="principles-node-label">CARE CLOSE TO HOME</div>
+                    <div class="principles-node-card">
+                      <h3 class="principles-card-title">CARE CLOSE TO HOME</h3>
+                      <p class="principles-card-content">Dependable medical services in Jamkhandi, saving families the burden of frequent long travels.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="principles-orbital-item principles-item-4" data-id="4">
+                  <div class="principles-node-inner">
+                    <div class="principles-node-glow"></div>
+                    <div class="principles-node-icon">
+                      <span class="principles-item-number">04</span>
+                    </div>
+                    <div class="principles-node-label">CONTINUITY OF CARE</div>
+                    <div class="principles-node-card">
+                      <h3 class="principles-card-title">CONTINUITY OF CARE</h3>
+                      <p class="principles-card-content">Dedicated post-treatment support, physio guidance, and regular check-ups until full recovery.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="principles-orbital-item principles-item-5" data-id="5">
+                  <div class="principles-node-inner">
+                    <div class="principles-node-glow"></div>
+                    <div class="principles-node-icon">
+                      <span class="principles-item-number">05</span>
+                    </div>
+                    <div class="principles-node-label">CLINICAL EXCELLENCE</div>
+                    <div class="principles-node-card">
+                      <h3 class="principles-card-title">CLINICAL EXCELLENCE</h3>
+                      <p class="principles-card-content">Adherence to established safety protocols, modern medical practices, and strict clinical standards.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="principles-orbital-item principles-item-6" data-id="6">
+                  <div class="principles-node-inner">
+                    <div class="principles-node-glow"></div>
+                    <div class="principles-node-icon">
+                      <span class="principles-item-number">06</span>
+                    </div>
+                    <div class="principles-node-label">COMPASSION & RESPECT</div>
+                    <div class="principles-node-card">
+                      <h3 class="principles-card-title">COMPASSION & RESPECT</h3>
+                      <p class="principles-card-content">Treating every patient and family member with warmth, dignity, empathy, and sincere personal attention.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 — FIND SANADI ORTHOPAEDIC HOSPITAL (Editorial Destination Section) -->
+      <section class="about-location-editorial about-reveal-section" id="location">
+        <div class="location-destination-layout">
+          <!-- LEFT COLUMN: Editorial Location Information (42%) -->
+          <div class="location-editorial-col">
+            <!-- Section Header (Left-aligned, flowing directly into info) -->
+            <div class="location-editorial-header">
+              <span class="about-section-tag">VISIT & CONTACT</span>
+              <h2 class="about-editorial-heading">Find Sanadi Orthopaedic Hospital</h2>
+              <p class="location-subtext">
+                Located on Main Road in Jamkhandi, Karnataka, Sanadi Orthopaedic Hospital provides specialized orthopaedic care for patients from the town and surrounding areas.
+              </p>
+            </div>
+
+            <!-- Continuous Editorial Information Column (NO CARDS) -->
+            <div class="location-info-stack">
+              <!-- Item 1: Hospital Address (Primary Weight) -->
+              <div class="location-info-group primary-group">
+                <span class="location-group-label">HOSPITAL ADDRESS</span>
+                <p class="location-address-main">
+                  <strong>Sanadi Orthopaedic Hospital</strong><br>
+                  Main Road, Jamkhandi<br>
+                  Karnataka – 587301, India
+                </p>
+              </div>
+
+              <div class="location-divider"></div>
+
+              <!-- Item 2: OPD Consultation Hours (Secondary Weight) -->
+              <div class="location-info-group">
+                <span class="location-group-label">OPD CONSULTATION HOURS</span>
+                <p class="location-info-val">
+                  Monday to Saturday<br>
+                  <span class="location-time-highlight">9:00 AM – 9:00 PM</span>
+                </p>
+              </div>
+
+              <div class="location-divider"></div>
+
+              <!-- Item 3: Emergency Contact (Discoverable Accent) -->
+              <div class="location-info-group emergency-group">
+                <span class="location-group-label emergency-label">EMERGENCY</span>
+                <p class="location-info-val">
+                  <strong>24×7 Emergency Desk</strong><br>
+                  <a href="tel:+919845000000" class="location-phone-link">+91 98450 00000</a>
+                </p>
+                <p class="location-email-sub">
+                  care@sanadihospital.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Google Map Stage -->
+          <div class="location-map-stage">
+            <iframe 
+              src="https://maps.google.com/maps?q=Sanadi%20Orthopaedic%20Hospital%20Jamkhandi&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sanadi Orthopaedic Hospital Google Maps Location">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Centered Actions Row Below Section Layout -->
+        <div class="location-actions-row">
+          <a href="https://maps.google.com/?q=Sanadi+Orthopaedic+Hospital+Jamkhandi" target="_blank" rel="noopener" class="btn btn-primary btn-shimmer-glow">
+            <i data-lucide="compass" style="width: 18px; height: 18px;"></i>
+            <span>Get Driving Directions</span>
+          </a>
+          <a href="tel:+919845000000" class="location-secondary-action">
+            <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+            <span>Call Hospital</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer (Matching Homepage) -->
+    <footer class="site-footer">
+      <div class="footer-content-grid">
+        <div>
+          <a href="/index.html" class="brand-logo">
+            <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
+            <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+          </a>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="javascript:void(0)">Specialties</a></li>
+            <li><a href="/facilities.html">Facilities</a></li>
+            <li><a href="/index.html#doctors">Surgeons</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/index.html#contact">Contact Clinic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Our Specialities</h4>
+          <ul class="footer-links-list">
+            <li><a href="specialties/orthopaedics.html">Orthopaedics</a></li>
+            <li><a href="specialties/trauma-care.html">Trauma Care</a></li>
+            <li><a href="specialties/neurosurgery.html">Neurosurgery</a></li>
+            <li><a href="specialties/joint-replacement.html">Joint Replacement</a></li>
+            <li><a href="specialties/arthroscopy.html">Arthroscopy</a></li>
+            <li><a href="specialties/physiotherapy.html">Physiotherapy</a></li>
+            <li><a href="specialties/sports-injury-clinic.html">Sports Medicine</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin" style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>Sanadi Orthopaedic Hospital, Main Road, Jamkhandi</span>
+            </li>
+            <li>
+              <i data-lucide="phone" style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>Emergency 24x7: <a href="tel:+919845000000" style="color: #2563EB; font-weight: 700;">+91 98450 00000</a></span>
+            </li>
+            <li>
+              <i data-lucide="mail" style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span><a href="mailto:care@sanadihospital.com">care@sanadihospital.com</a></span>
+            </li>
+            <li>
+              <i data-lucide="clock" style="width: 18px; height: 18px; color: #2563EB; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>OPD: Mon - Sat (9:00 AM - 9:00 PM)<br><strong style="color: #059669;">24x7 Emergency Services</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sanadi Orthopaedic Hospital. Established in 2003 by Dr. G. N. Sanadi. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>
