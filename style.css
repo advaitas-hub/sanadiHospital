@@ -543,8 +543,8 @@ a {
   animation: heroFadeSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.hero-headline span {
-  font-family: 'Cinzel', serif;
+.hero-headline .hero-headline-highlight {
+  font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
   font-weight: 900;
   background: linear-gradient(120deg, #1E40AF 0%, #3B82F6 30%, #60A5FA 50%, #2563EB 70%, #1E40AF 100%);
   background-size: 200% auto;
@@ -559,7 +559,7 @@ a {
   cursor: pointer;
 }
 
-.hero-headline span:hover {
+.hero-headline .hero-headline-highlight:hover {
   transform: scale(1.08) translateY(-2px);
   filter: drop-shadow(0 8px 24px rgba(59, 130, 246, 0.7));
 }
@@ -607,12 +607,18 @@ a {
 .hero-headline-prefix {
   font-family: 'Allura', 'Fleur De Leah', 'Shadows Into Light', cursive !important;
   font-size: 3.4rem !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
   display: block !important;
   line-height: 1.15 !important;
   letter-spacing: 0.01em !important;
   margin-bottom: 2px !important;
+  filter: none !important;
+  animation: none !important;
 }
 
 .hero-headline-highlight {
