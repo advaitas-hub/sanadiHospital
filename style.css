@@ -1618,22 +1618,24 @@ a {
   width: 100%;
 }
 
+/* 3D Perspective Grid Container */
+.specialties-grid,
+.clean-facilities-grid,
+.specialties-7-grid {
+  perspective: 1200px;
+  perspective-origin: 50% 0%;
+}
+
 .specialty-card {
   --rotation: 0deg;
   --card-border-color: #2563EB;
   --card-border-bg: #CBD5E1;
   --card-bg-color: #FFFFFF;
-  --pattern-color1: transparent;
-  --pattern-color2: transparent;
 
   background: #FFFFFF;
   border: 1.5px solid var(--card-border-color);
   border-radius: var(--radius-card);
   padding: 28px;
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s ease,
-              border-color 0.35s ease;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1642,10 +1644,51 @@ a {
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 6px 20px -4px rgba(15, 23, 42, 0.07);
+
+  /* 3D Cinematic Scroll Entrance Initial State */
   opacity: 0;
-  transform: translateY(44px) scale(0.94);
-  will-change: opacity, transform;
+  transform: perspective(1200px) rotateX(24deg) translateY(64px) scale(0.88);
+  filter: blur(10px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  will-change: opacity, transform, filter;
+  transform-style: preserve-3d;
+}
+
+/* Laser Sheen Sweep Light Reflection */
+.specialty-card::after,
+.clean-facility-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.section-revealed .specialty-card::after,
+.section-revealed .clean-facility-card::after,
+.specialty-card.is-revealed::after,
+.clean-facility-card.is-revealed::after {
+  animation: laserSheen 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes laserSheen {
+  0% { left: -150%; opacity: 1; }
+  100% { left: 180%; opacity: 0; }
 }
 
 /* Revealed active state when section or container scrolls into view */
@@ -1656,41 +1699,61 @@ a {
 .specialty-card.is-revealed,
 .clean-facility-card.is-revealed {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: perspective(1200px) rotateX(0deg) translateY(0) scale(1);
+  filter: blur(0px);
 }
 
 /* Staggered Delay for Each Sequential Card (1 to 9) */
 .section-revealed .specialty-card:nth-child(1),
 .section-revealed .clean-facility-card:nth-child(1),
-.specialties-grid .specialty-card:nth-child(1) { transition-delay: 0.08s; }
+.specialty-card:nth-child(1) { transition-delay: 0.05s; }
 
 .section-revealed .specialty-card:nth-child(2),
 .section-revealed .clean-facility-card:nth-child(2),
-.specialties-grid .specialty-card:nth-child(2) { transition-delay: 0.20s; }
+.specialty-card:nth-child(2) { transition-delay: 0.16s; }
 
 .section-revealed .specialty-card:nth-child(3),
 .section-revealed .clean-facility-card:nth-child(3),
-.specialties-grid .specialty-card:nth-child(3) { transition-delay: 0.32s; }
+.specialty-card:nth-child(3) { transition-delay: 0.27s; }
 
 .section-revealed .specialty-card:nth-child(4),
 .section-revealed .clean-facility-card:nth-child(4),
-.specialties-grid .specialty-card:nth-child(4) { transition-delay: 0.44s; }
+.specialty-card:nth-child(4) { transition-delay: 0.38s; }
 
 .section-revealed .specialty-card:nth-child(5),
 .section-revealed .clean-facility-card:nth-child(5),
-.specialties-grid .specialty-card:nth-child(5) { transition-delay: 0.56s; }
+.specialty-card:nth-child(5) { transition-delay: 0.49s; }
 
 .section-revealed .specialty-card:nth-child(6),
 .section-revealed .clean-facility-card:nth-child(6),
-.specialties-grid .specialty-card:nth-child(6) { transition-delay: 0.68s; }
+.specialty-card:nth-child(6) { transition-delay: 0.60s; }
 
 .section-revealed .specialty-card:nth-child(7),
 .section-revealed .clean-facility-card:nth-child(7),
-.specialties-grid .specialty-card:nth-child(7) { transition-delay: 0.80s; }
+.specialty-card:nth-child(7) { transition-delay: 0.71s; }
+
+/* Sheen Laser Delays */
+.section-revealed .specialty-card:nth-child(1)::after,
+.section-revealed .clean-facility-card:nth-child(1)::after { animation-delay: 0.45s; }
+
+.section-revealed .specialty-card:nth-child(2)::after,
+.section-revealed .clean-facility-card:nth-child(2)::after { animation-delay: 0.56s; }
+
+.section-revealed .specialty-card:nth-child(3)::after,
+.section-revealed .clean-facility-card:nth-child(3)::after { animation-delay: 0.67s; }
+
+.section-revealed .specialty-card:nth-child(4)::after,
+.section-revealed .clean-facility-card:nth-child(4)::after { animation-delay: 0.78s; }
+
+.section-revealed .specialty-card:nth-child(5)::after,
+.section-revealed .clean-facility-card:nth-child(5)::after { animation-delay: 0.89s; }
+
+.section-revealed .specialty-card:nth-child(6)::after,
+.section-revealed .clean-facility-card:nth-child(6)::after { animation-delay: 1.00s; }
 
 .specialty-card:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 12px 24px -2px rgba(37, 99, 235, 0.18);
+  transform: perspective(1200px) translateY(-8px) scale(1.025);
+  box-shadow: 0 20px 40px -8px rgba(37, 99, 235, 0.22);
 }
 
 .specialty-card.hidden-card {
@@ -12590,14 +12653,26 @@ body.editorial-about-page {
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-  min-height: 400px;
+  position: relative;
+  min-height: 280px;
+
+  /* 3D Cinematic Scroll Entrance Initial State */
+  opacity: 0;
+  transform: perspective(1200px) rotateX(24deg) translateY(64px) scale(0.88);
+  filter: blur(10px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  will-change: opacity, transform, filter;
+  transform-style: preserve-3d;
 }
 
 .clean-facility-card:hover {
-  transform: translateY(-7px);
-  border-color: #93C5FD;
-  box-shadow: 0 20px 40px -8px rgba(37, 99, 235, 0.14);
+  transform: perspective(1200px) translateY(-8px) scale(1.025);
+  border-color: #2563EB;
+  box-shadow: 0 20px 40px -8px rgba(37, 99, 235, 0.2);
 }
 
 /* Card Image Header Wrap */
