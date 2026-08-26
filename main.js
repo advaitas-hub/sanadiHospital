@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Section Entrance Reveal Observer (Triggers section-revealed for Medical Specialties & Facilities)
-  const sectionContainers = document.querySelectorAll('.services-section, #services, .aesthetic-facilities-section, .why-trust-carousel-section');
+  const sectionContainers = document.querySelectorAll('.services-section, #services, .clean-editorial-facilities-section, .why-trust-carousel-section');
   const sectionObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
