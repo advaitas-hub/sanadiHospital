@@ -26,49 +26,40 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // 1.5 Clinical Metrics Scroll-Triggered Counter & Bar Fill Engine
-  const metricsWrapper = document.getElementById('clinicalMetricsDashboard');
-  if (metricsWrapper) {
-    let animated = false;
+  // 1.5 SVG Area Line Chart Graph Path Drawing & Interactive Controls Engine
+  const chartCard = document.getElementById('clinicalOutcomeGraphCard');
+  if (chartCard) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !animated) {
-          animated = true;
-          metricsWrapper.classList.add('is-animated');
-          
-          // Animate Progress Bar Fills
-          const fills = metricsWrapper.querySelectorAll('.metric-fill');
-          fills.forEach((fill, idx) => {
-            const targetWidth = fill.getAttribute('data-width');
-            fill.style.width = '0%';
-            setTimeout(() => {
-              fill.style.width = targetWidth;
-            }, idx * 180 + 100);
-          });
-
-          // Animate Number Counters Count-Up
-          const counters = metricsWrapper.querySelectorAll('.counter-num');
-          counters.forEach((counter, idx) => {
-            const target = parseInt(counter.getAttribute('data-target'), 10);
-            let count = 0;
-            counter.innerText = '0%';
-            setTimeout(() => {
-              const duration = 1600;
-              const stepTime = Math.abs(Math.floor(duration / target));
-              const timer = setInterval(() => {
-                count += 1;
-                counter.innerText = count + '%';
-                if (count >= target) {
-                  counter.innerText = target + '%';
-                  clearInterval(timer);
-                }
-              }, stepTime);
-            }, idx * 180 + 100);
-          });
+        if (entry.isIntersecting) {
+          chartCard.classList.add('is-drawn');
         }
       });
     }, { threshold: 0.2 });
-    observer.observe(metricsWrapper);
+    observer.observe(chartCard);
+
+    // Interactive Tab Switcher
+    const tabBtns = chartCard.querySelectorAll('.chart-tab-btn');
+    const linePath = document.getElementById('graphLinePath');
+    const areaPath = document.getElementById('graphAreaPath');
+    
+    if (tabBtns && linePath && areaPath) {
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const type = btn.getAttribute('data-graph');
+          if (type === 'recovery') {
+            linePath.setAttribute('d', 'M 30 160 Q 150 70, 250 80 T 470 20');
+            areaPath.setAttribute('d', 'M 30 160 Q 150 70, 250 80 T 470 20 L 470 180 L 30 180 Z');
+          } else {
+            linePath.setAttribute('d', 'M 30 140 Q 150 110, 250 50 T 470 30');
+            areaPath.setAttribute('d', 'M 30 140 Q 150 110, 250 50 T 470 30 L 470 180 L 30 180 Z');
+          }
+        });
+      });
+    }
   }
 
   // 2. Dynamic Scroll Engine (Header Glassmorphic Blur, Back-to-Top, Parallax)
