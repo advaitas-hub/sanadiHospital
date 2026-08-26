@@ -12890,28 +12890,59 @@ body.editorial-about-page {
    DYNAMIC SCROLL EFFECTS & INTERACTIVE REVEALS
    ========================================================================== */
 
-/* 1. Top Reading Progress Bar */
-.scroll-progress-bar {
+/* 1. Medical ECG Heartbeat Top Scroll Progress Bar */
+.scroll-ecg-container {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4px;
-  width: 0%;
-  background: linear-gradient(90deg, #2563EB, #10B981, #3B82F6, #6366F1);
-  background-size: 200% 100%;
-  animation: gradientFlow 4s ease infinite;
+  width: 100%;
+  height: 26px;
   z-index: 10000;
-  box-shadow: 0 0 12px rgba(37, 99, 235, 0.6), 0 0 20px rgba(16, 185, 129, 0.4);
-  transition: width 0.08s ease-out;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
   pointer-events: none;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.08);
 }
 
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.scroll-ecg-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ecg-bg-track {
+  stroke: rgba(16, 185, 129, 0.15);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.ecg-progress-path {
+  stroke: #10B981;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.9)) drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
+  transition: stroke-dashoffset 0.06s linear;
+}
+
+.ecg-pulse-glow-dot {
+  fill: #34D399;
+  filter: drop-shadow(0 0 6px #10B981) drop-shadow(0 0 12px #059669);
+  transition: transform 0.06s linear;
+}
+
+@keyframes ecgDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.85; }
+}
+
+.ecg-pulse-glow-dot circle {
+  animation: ecgDotPulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transform-origin: center;
 }
 
 /* 2. Enhanced Header Glassmorphism on Scroll */

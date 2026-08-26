@@ -8,17 +8,64 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // 2. Dynamic Scroll Engine (Progress Bar, Back-to-Top, Header Glassmorphism)
+  // 2. Dynamic Scroll Engine with Medical ECG Heartbeat Progress Bar
   const header = document.getElementById('header');
 
-  // Create Top Scroll Progress Bar
-  let progressBar = document.getElementById('scrollProgressBar');
-  if (!progressBar) {
-    progressBar = document.createElement('div');
-    progressBar.id = 'scrollProgressBar';
-    progressBar.className = 'scroll-progress-bar';
-    document.body.prepend(progressBar);
+  // Create & Build ECG Heartbeat SVG Progress Waveform
+  let ecgContainer = document.getElementById('scrollEcgContainer');
+  let ecgProgressPath = null;
+  let ecgGlowDot = null;
+  let ecgPathLength = 0;
+
+  function initEcgProgressBar() {
+    if (!ecgContainer) {
+      ecgContainer = document.createElement('div');
+      ecgContainer.id = 'scrollEcgContainer';
+      ecgContainer.className = 'scroll-ecg-container';
+      document.body.prepend(ecgContainer);
+    }
+
+    const width = Math.max(window.innerWidth || 1200, 1400);
+    const height = 26;
+    const baseline = 13;
+    const cycleWidth = 110;
+    const cycles = Math.ceil(width / cycleWidth) + 1;
+
+    let pathD = `M 0 ${baseline}`;
+    for (let i = 0; i < cycles; i++) {
+      const x = i * cycleWidth;
+      pathD += ` L ${x + 25} ${baseline}`;
+      pathD += ` Q ${x + 32} ${baseline - 4}, ${x + 38} ${baseline}`; // P wave
+      pathD += ` L ${x + 44} ${baseline + 2}`;
+      pathD += ` L ${x + 50} 3`; // QRS Spike High UP
+      pathD += ` L ${x + 56} 24`; // QRS Spike Low DOWN
+      pathD += ` L ${x + 62} ${baseline}`; // Return to baseline
+      pathD += ` Q ${x + 72} ${baseline - 6}, ${x + 82} ${baseline}`; // T wave
+      pathD += ` L ${x + cycleWidth} ${baseline}`;
+    }
+
+    ecgContainer.innerHTML = `
+      <svg class="scroll-ecg-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="ecg-bg-track" d="${pathD}" />
+        <path id="ecgProgressPath" class="ecg-progress-path" d="${pathD}" />
+        <g id="ecgGlowDot" class="ecg-pulse-glow-dot">
+          <circle cx="0" cy="${baseline}" r="4.5" />
+        </g>
+      </svg>
+    `;
+
+    ecgProgressPath = document.getElementById('ecgProgressPath');
+    ecgGlowDot = document.getElementById('ecgGlowDot');
+
+    if (ecgProgressPath) {
+      ecgPathLength = ecgProgressPath.getTotalLength();
+      ecgProgressPath.style.strokeDasharray = ecgPathLength;
+      ecgProgressPath.style.strokeDashoffset = ecgPathLength;
+    }
   }
+
+  initEcgProgressBar();
+  window.addEventListener('resize', initEcgProgressBar);
 
   // Create Floating Back-to-Top Button
   let backToTopBtn = document.getElementById('backToTopBtn');
@@ -53,11 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
           header?.classList.remove('scrolled');
         }
 
-        // Update Reading Progress Bar
+        // Update Reading ECG Progress Bar & Heartbeat Dot
         const winHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (winHeight > 0 && progressBar) {
-          const progressPercent = Math.min(100, Math.max(0, (scrolled / winHeight) * 100));
-          progressBar.style.width = `${progressPercent}%`;
+        if (winHeight > 0 && ecgProgressPath) {
+          const progressPercent = Math.min(1, Math.max(0, scrolled / winHeight));
+          const drawLength = ecgPathLength * progressPercent;
+          ecgProgressPath.style.strokeDashoffset = ecgPathLength - drawLength;
+
+          if (ecgGlowDot && typeof ecgProgressPath.getPointAtLength === 'function') {
+            try {
+              const pt = ecgProgressPath.getPointAtLength(drawLength);
+              ecgGlowDot.setAttribute('transform', `translate(${pt.x}, ${pt.y - 13})`);
+            } catch (e) {
+              // fallback ignore
+            }
+          }
         }
 
         // Toggle Back-to-Top Button visibility
