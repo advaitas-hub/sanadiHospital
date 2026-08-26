@@ -12809,7 +12809,7 @@ body.editorial-about-page {
   text-decoration: none;
   color: inherit;
   position: relative;
-  min-height: 280px;
+  min-height: 180px;
 
   /* 3D Cinematic Scroll Entrance Initial State */
   opacity: 0;
