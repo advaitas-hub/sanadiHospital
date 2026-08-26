@@ -509,16 +509,28 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animateBeam);
   });
 
-  // Section Entrance Reveal Observer (Triggers section-revealed for Medical Specialties & Facilities)
-  const sectionContainers = document.querySelectorAll('.services-section, #services, .clean-editorial-facilities-section, .why-trust-carousel-section');
+  // Section & Card Staggered Scroll Entrance Observer
+  const sectionContainers = document.querySelectorAll(
+    '.services-section, #services, .clean-editorial-facilities-section, #facilities, .why-trust-carousel-section, .specialty-card, .clean-facility-card'
+  );
   const sectionObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('section-revealed');
+        entry.target.classList.add('is-revealed');
+
+        // Trigger stagger on child cards if parent container intersected
+        const innerCards = entry.target.querySelectorAll('.specialty-card, .clean-facility-card');
+        innerCards.forEach((c, idx) => {
+          setTimeout(() => {
+            c.classList.add('is-revealed');
+          }, idx * 100);
+        });
+
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
   sectionContainers.forEach(sec => sectionObserver.observe(sec));
 

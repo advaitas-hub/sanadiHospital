@@ -1630,7 +1630,10 @@ a {
   border: 1.5px solid var(--card-border-color);
   border-radius: var(--radius-card);
   padding: 28px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1640,11 +1643,54 @@ a {
   user-select: none;
   overflow: hidden;
   box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+  opacity: 0;
+  transform: translateY(44px) scale(0.94);
+  will-change: opacity, transform;
 }
 
+/* Revealed active state when section or container scrolls into view */
+.section-revealed .specialty-card,
+.section-revealed .clean-facility-card,
+.services-section.section-revealed .specialty-card,
+.clean-editorial-facilities-section.section-revealed .clean-facility-card,
+.specialty-card.is-revealed,
+.clean-facility-card.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered Delay for Each Sequential Card (1 to 9) */
+.section-revealed .specialty-card:nth-child(1),
+.section-revealed .clean-facility-card:nth-child(1),
+.specialties-grid .specialty-card:nth-child(1) { transition-delay: 0.08s; }
+
+.section-revealed .specialty-card:nth-child(2),
+.section-revealed .clean-facility-card:nth-child(2),
+.specialties-grid .specialty-card:nth-child(2) { transition-delay: 0.20s; }
+
+.section-revealed .specialty-card:nth-child(3),
+.section-revealed .clean-facility-card:nth-child(3),
+.specialties-grid .specialty-card:nth-child(3) { transition-delay: 0.32s; }
+
+.section-revealed .specialty-card:nth-child(4),
+.section-revealed .clean-facility-card:nth-child(4),
+.specialties-grid .specialty-card:nth-child(4) { transition-delay: 0.44s; }
+
+.section-revealed .specialty-card:nth-child(5),
+.section-revealed .clean-facility-card:nth-child(5),
+.specialties-grid .specialty-card:nth-child(5) { transition-delay: 0.56s; }
+
+.section-revealed .specialty-card:nth-child(6),
+.section-revealed .clean-facility-card:nth-child(6),
+.specialties-grid .specialty-card:nth-child(6) { transition-delay: 0.68s; }
+
+.section-revealed .specialty-card:nth-child(7),
+.section-revealed .clean-facility-card:nth-child(7),
+.specialties-grid .specialty-card:nth-child(7) { transition-delay: 0.80s; }
+
 .specialty-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px -2px rgba(37, 99, 235, 0.15);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 24px -2px rgba(37, 99, 235, 0.18);
 }
 
 .specialty-card.hidden-card {
