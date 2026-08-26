@@ -3,6 +3,21 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Cinematic Brand Intro Preloader Screen Dismissal
+  const preloader = document.getElementById('siteIntroPreloader');
+  if (preloader) {
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (preloader.parentNode) {
+          preloader.parentNode.removeChild(preloader);
+        }
+      }, 850);
+    }, 1500);
+  }
+
   // 1. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
