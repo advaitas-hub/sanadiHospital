@@ -509,23 +509,18 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animateBeam);
   });
 
-  // 10. Scroll Entrance Reveal Intersection Observer (Triggers ONCE per page load)
-  const revealElements = document.querySelectorAll(
-    '.reveal-on-scroll, .section-header-center, .specialty-card, .facility-card, .contact-info-card, .contact-form-card, .trust-bento-card, .feature-card, .creative-facility-card, .specialist-card-item, .editorial-hospital-card, .specialty-hero-wrap, .stat-chip-editorial'
-  );
-  const revealObserver = new IntersectionObserver((entries, obs) => {
+  // Section Entrance Reveal Observer (Triggers section-revealed for Medical Specialties & Facilities)
+  const sectionContainers = document.querySelectorAll('.services-section, #services, .aesthetic-facilities-section, .why-trust-carousel-section');
+  const sectionObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
+        entry.target.classList.add('section-revealed');
         obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.08 });
 
-  revealElements.forEach(el => {
-    el.classList.add('reveal-on-scroll');
-    revealObserver.observe(el);
-  });
+  sectionContainers.forEach(sec => sectionObserver.observe(sec));
 
   // 11. Universal Smooth Animated Stat Counter Engine
   const counterContainers = document.querySelectorAll(
