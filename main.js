@@ -571,7 +571,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!numMatch) return;
 
     const targetVal = parseInt(numMatch[0], 10);
-    const duration = Math.min(1800, Math.max(900, targetVal > 1000 ? 1400 : 1000));
+    // Extended duration (2.8s to 4.2s) for a dramatic, highly visible counting effect
+    const duration = targetVal >= 100000 ? 4200 : (targetVal >= 10000 ? 3800 : (targetVal >= 1000 ? 3400 : 2800));
     const startTime = performance.now();
 
     function updateCounter(currentTime) {
