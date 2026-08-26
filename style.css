@@ -12594,22 +12594,42 @@ body.editorial-about-page {
   z-index: 2;
 }
 
+.clean-card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.clean-card-img-badge {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .clean-card-img-badge.green-badge {
-  background: rgba(6, 78, 59, 0.82);
-  color: #6EE7B7;
-  border: 1px solid rgba(52, 211, 153, 0.3);
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
 .clean-card-img-badge.red-badge {
-  background: rgba(127, 29, 29, 0.82);
-  color: #FCA5A5;
-  border: 1px solid rgba(248, 113, 113, 0.3);
+  background: rgba(239, 68, 68, 0.1);
+  color: #B91C1C;
+  border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
 .clean-card-img-badge.blue-badge {
-  background: rgba(30, 58, 138, 0.82);
-  color: #93C5FD;
-  border: 1px solid rgba(147, 197, 253, 0.3);
+  background: rgba(37, 99, 235, 0.1);
+  color: #1D4ED8;
+  border: 1px solid rgba(37, 99, 235, 0.25);
 }
 
 .badge-dot {
@@ -12618,9 +12638,9 @@ body.editorial-about-page {
   border-radius: 50%;
 }
 
-.badge-dot.green { background: #34D399; box-shadow: 0 0 6px #34D399; }
-.badge-dot.red { background: #F87171; box-shadow: 0 0 6px #F87171; }
-.badge-dot.blue { background: #60A5FA; box-shadow: 0 0 6px #60A5FA; }
+.badge-dot.green { background: #10B981; box-shadow: 0 0 6px #10B981; }
+.badge-dot.red { background: #EF4444; box-shadow: 0 0 6px #EF4444; }
+.badge-dot.blue { background: #2563EB; box-shadow: 0 0 6px #2563EB; }
 
 /* Card Body */
 .clean-card-body {
