@@ -153,7 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isExpanded) {
         hiddenCards.forEach(card => {
-          card.classList.add('is-revealed');
+          card.classList.add('show-card');
+          card.classList.add('user-expanded');
         });
         viewMoreBtn.classList.add('expanded');
         const span = viewMoreBtn.querySelector('span');
@@ -162,7 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (icon) icon.setAttribute('data-lucide', 'chevron-up');
       } else {
         hiddenCards.forEach(card => {
-          card.classList.remove('is-revealed');
+          card.classList.remove('show-card');
+          card.classList.remove('user-expanded');
         });
         viewMoreBtn.classList.remove('expanded');
         const span = viewMoreBtn.querySelector('span');
@@ -574,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('is-revealed');
 
         // Trigger stagger on child cards if parent container intersected
-        const innerCards = entry.target.querySelectorAll('.specialty-card, .clean-facility-card');
+        const innerCards = entry.target.querySelectorAll('.specialty-card:not(.hidden-card), .clean-facility-card');
         innerCards.forEach((c, idx) => {
           setTimeout(() => {
             c.classList.add('is-revealed');
