@@ -362,16 +362,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sliderTrack) sliderTrack.scrollLeft = 0;
   }
 
-  // Slider Navigation Arrows (Manual step navigation if slider is active)
+  // Slider Navigation Arrows (Dynamic card step navigation)
+  function getDoctorScrollStep() {
+    if (!sliderTrack) return 340;
+    const card = sliderTrack.querySelector('.specialist-card-item');
+    if (card) {
+      const cardWidth = card.offsetWidth;
+      const trackStyle = window.getComputedStyle(sliderTrack);
+      const gap = parseFloat(trackStyle.gap) || 28;
+      return cardWidth + gap;
+    }
+    return 340;
+  }
+
   if (docSliderPrev && sliderTrack) {
     docSliderPrev.addEventListener('click', () => {
-      sliderTrack.scrollBy({ left: -360, behavior: 'smooth' });
+      sliderTrack.scrollBy({ left: -getDoctorScrollStep(), behavior: 'smooth' });
     });
   }
 
   if (docSliderNext && sliderTrack) {
     docSliderNext.addEventListener('click', () => {
-      sliderTrack.scrollBy({ left: 360, behavior: 'smooth' });
+      sliderTrack.scrollBy({ left: getDoctorScrollStep(), behavior: 'smooth' });
     });
   }
 
