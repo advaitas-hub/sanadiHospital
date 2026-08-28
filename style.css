@@ -2991,6 +2991,18 @@ body:not(.intro-complete) .hero-visual {
   .arrow-next {
     right: 2px;
   }
+
+  .testimonial-card-item {
+    width: 295px;
+    min-height: 200px;
+    height: auto;
+    padding: 16px;
+  }
+
+  .testimonial-quote {
+    font-size: 0.835rem;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3002,6 +3014,19 @@ body:not(.intro-complete) .hero-visual {
     flex: 0 0 calc(100vw - 76px);
     max-width: 290px;
     scroll-snap-align: center;
+  }
+
+  .testimonial-card-item {
+    width: calc(100vw - 60px);
+    max-width: 285px;
+    min-height: 190px;
+    height: auto;
+    padding: 14px;
+  }
+
+  .testimonial-quote {
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 }
 
@@ -3499,7 +3524,8 @@ body:not(.intro-complete) .hero-visual {
 
 .testimonial-card-item {
   width: 340px;
-  height: 210px;
+  min-height: 220px;
+  height: auto;
   flex-shrink: 0;
   background: #FFFFFF;
   border: 2px solid var(--color-border);
@@ -3510,6 +3536,7 @@ body:not(.intro-complete) .hero-visual {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .testimonial-card-item:hover {
@@ -3522,8 +3549,9 @@ body:not(.intro-complete) .hero-visual {
   font-size: 0.875rem;
   color: var(--color-charcoal);
   line-height: 1.6;
-  text-align: justify;
-  overflow: hidden;
+  text-align: left;
+  overflow: visible;
+  word-wrap: break-word;
 }
 
 .highlight-blue {
