@@ -11441,14 +11441,14 @@ body.editorial-about-page {
 
 .principles-orbit-container {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 560px;
+  height: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
-  --orbit-radius: 300px;
-  --orbit-cx: 300px;
-  --orbit-cy: 300px;
+  --orbit-radius: 220px;
+  --orbit-cx: 280px;
+  --orbit-cy: 280px;
 }
 
 .principles-center-node {
@@ -11542,10 +11542,9 @@ body.editorial-about-page {
   position: absolute;
   cursor: pointer;
   transition: all 0.3s ease;
-  transform: translate(-50%, -50%);
 }
 
-/* Fixed Node positions around the orbital ring */
+/* Fixed Node positions EXACTLY ON the orbital ring track line */
 .principles-item-1 {
   left: var(--orbit-cx);
   top: calc(var(--orbit-cy) - var(--orbit-radius));
@@ -11576,57 +11575,50 @@ body.editorial-about-page {
   top: calc(var(--orbit-cy) - var(--orbit-radius) * 0.5);
 }
 
-/* Horizontal White Pill Card Badge (Matching Leela Hospital Design) */
-/* Static Cards with Original Titles & Descriptions (Rotation Stopped) */
-.principles-static-card {
-  width: 230px;
+/* Horizontal White Pill Card Badge (Matching Leela Design & Aligned on Circle Track) */
+.principles-pill-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: #FFFFFF;
-  border: 1.5px solid rgba(226, 232, 240, 0.95);
-  border-radius: 16px;
-  padding: 14px 16px;
-  box-shadow: 0 10px 28px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1.5px solid #CBD5E1;
+  padding: 10px 20px 10px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   transform: translate(-50%, -50%);
-  text-align: left;
+  z-index: 15;
 }
 
-.principles-static-card:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-  border-color: #3B82F6;
-  box-shadow: 0 14px 36px -6px rgba(37, 99, 235, 0.2);
+.principles-pill-card:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  border-color: #2563EB;
+  box-shadow: 0 14px 32px -6px rgba(37, 99, 235, 0.22);
 }
 
-.principles-card-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.principles-card-num {
+.pill-badge-num {
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  padding: 2px 7px;
-  border-radius: 6px;
+  padding: 3px 8px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 
-.principles-card-num.num-blue { background: #EFF6FF; color: #2563EB; }
-.principles-card-num.num-teal { background: #ECFDF5; color: #10B981; }
-.principles-card-num.num-cyan { background: #ECFEFF; color: #06B6D4; }
-.principles-card-num.num-green { background: #F0FDF4; color: #16A34A; }
-.principles-card-num.num-indigo { background: #EEF2FF; color: #4F46E5; }
-.principles-card-num.num-purple { background: #F3E8FF; color: #9333EA; }
+.pill-badge-num.num-blue { background: #EFF6FF; color: #2563EB; }
+.pill-badge-num.num-teal { background: #ECFDF5; color: #10B981; }
+.pill-badge-num.num-cyan { background: #ECFEFF; color: #06B6D4; }
+.pill-badge-num.num-green { background: #F0FDF4; color: #16A34A; }
+.pill-badge-num.num-indigo { background: #EEF2FF; color: #4F46E5; }
+.pill-badge-num.num-purple { background: #F3E8FF; color: #9333EA; }
 
-.principles-card-heading {
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+.pill-badge-title {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #0F172A;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .principles-card-desc {
