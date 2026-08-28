@@ -11941,102 +11941,119 @@ body.editorial-about-page {
 }
 
 @media (max-width: 768px) {
-  .principles-hero-container {
-    padding: 20px 12px;
-  }
-
-  .principles-header {
-    margin-bottom: 30px;
+  .principles-hero-container.principles-split-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 20px 16px;
   }
 
   .principles-orbital-timeline.principles-right-stage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
     overflow: visible;
   }
 
   .principles-orbit-container {
-    width: 330px;
-    height: 330px;
-    --orbit-radius: 145px;
-    --orbit-cx: 165px;
-    --orbit-cy: 165px;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    transform: none !important;
   }
 
+  /* Hide circular orbit ring tracks on mobile for clean card layout */
+  .principles-orbit-ring-mid,
   .principles-orbit-ring-main {
-    width: calc(var(--orbit-radius) * 2);
-    height: calc(var(--orbit-radius) * 2);
-    left: calc(var(--orbit-cx) - var(--orbit-radius));
-    top: calc(var(--orbit-cy) - var(--orbit-radius));
+    display: none !important;
   }
 
+  /* Center Emblem Node on Mobile */
   .principles-center-node {
-    width: 84px;
-    height: 84px;
+    position: relative !important;
+    inset: auto !important;
+    width: 110px !important;
+    height: 110px !important;
+    margin: 0 auto !important;
   }
 
   .principles-center-inner {
-    width: 60px;
-    height: 60px;
+    width: 88px !important;
+    height: 88px !important;
+    border-width: 3px !important;
   }
 
   .principles-logo-img {
-    width: 40px;
-    height: 40px;
+    width: 58px !important;
+    height: 58px !important;
   }
 
-  .principles-node-icon {
-    width: 30px;
-    height: 30px;
+  .principles-center-pulse-1 {
+    width: 110px !important;
+    height: 110px !important;
   }
 
-  .principles-item-number {
-    font-size: 0.8rem;
+  .principles-center-pulse-2 {
+    width: 135px !important;
+    height: 135px !important;
   }
 
-  .principles-node-label {
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 2px 8px;
-    top: 34px;
-    white-space: nowrap;
-    max-width: none;
-    overflow: visible;
-    text-overflow: clip;
-    opacity: 0.95;
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
-    display: block !important;
+  /* Clean 2-Column Responsive Cards Grid - Zero Overlap */
+  .principles-orbit-rotator.static-orbit-wrapper {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 10px !important;
+    transform: none !important;
   }
 
-  .principles-node-card {
-    width: 170px;
-    padding: 12px;
-    top: 65px;
+  .principles-orbital-item {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
   }
 
-  .principles-card-title {
-    font-size: 0.75rem;
+  .principles-pill-card {
+    position: relative !important;
+    transform: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+    white-space: normal !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05) !important;
   }
 
-  .principles-card-content {
-    font-size: 0.75rem;
+  .principles-pill-card:hover {
+    transform: translateY(-2px) !important;
+  }
+
+  .pill-badge-num {
+    font-size: 0.725rem !important;
+    padding: 2px 6px !important;
+  }
+
+  .pill-badge-title {
+    font-size: 0.825rem !important;
+    line-height: 1.35 !important;
   }
 }
 
 @media (max-width: 480px) {
-  .principles-orbit-container {
-    width: 310px;
-    height: 310px;
-    --orbit-radius: 135px;
-    --orbit-cx: 155px;
-    --orbit-cy: 155px;
-    transform: scale(0.92);
-  }
-
-  .principles-node-label {
-    display: block !important;
-    font-size: 0.6rem !important;
-    padding: 2px 6px !important;
-    opacity: 0.95 !important;
+  .principles-orbit-rotator.static-orbit-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
   }
 }
 
