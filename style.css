@@ -8205,15 +8205,31 @@ details[open] .faq-icon .v-line {
   }
 
   .specialty-hero-cta-group .btn {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    padding: 12px 14px !important;
+    font-size: 0.88rem !important;
+    word-break: break-word !important;
+    line-height: 1.35 !important;
   }
 
   .editorial-hero-image-wrap {
-    height: 260px;
-    border-radius: 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 240px !important;
+    border-radius: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .editorial-hero-image-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    background: #F8FAFC !important;
   }
 
   .patient-problem-visual-wrap {
