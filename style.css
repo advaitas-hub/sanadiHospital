@@ -9174,7 +9174,28 @@ body.bg-light,
   }
 
   .fac-specs-4col-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .fac-showcase-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 10px !important;
+  }
+
+  .fac-feature-mini-card {
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+    gap: 6px !important;
+  }
+
+  .fac-mini-card-title {
+    font-size: 0.85rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .fac-mini-card-desc {
+    font-size: 0.73rem !important;
+    line-height: 1.35 !important;
   }
 
   .fac-dual-panel-grid {
