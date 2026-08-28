@@ -11521,11 +11521,13 @@ body.editorial-about-page {
   width: calc(var(--orbit-radius) * 1.35);
   height: calc(var(--orbit-radius) * 1.35);
   border-radius: 50%;
-  border: 1.5px dashed rgba(203, 213, 225, 0.6);
+  border: 1.5px dashed rgba(56, 189, 248, 0.4);
   left: calc(var(--orbit-cx) - (var(--orbit-radius) * 1.35) / 2);
   top: calc(var(--orbit-cy) - (var(--orbit-radius) * 1.35) / 2);
   pointer-events: none;
   z-index: 2;
+  animation: rotateDottedTrackReverse 25s linear infinite;
+  transform-origin: center center;
 }
 
 .principles-orbit-ring-main {
@@ -11536,6 +11538,18 @@ body.editorial-about-page {
   border: 2px dashed #CBD5E1;
   left: calc(var(--orbit-cx) - var(--orbit-radius));
   top: calc(var(--orbit-cy) - var(--orbit-radius));
+  animation: rotateDottedTrack 35s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotateDottedTrack {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateDottedTrackReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }
 
 .principles-orbital-item {
