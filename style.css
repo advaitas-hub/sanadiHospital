@@ -8265,7 +8265,30 @@ details[open] .faq-icon .v-line {
   }
 
   .editorial-facilities-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 10px !important;
+  }
+
+  .facility-editorial-card {
+    padding: 12px 10px !important;
+    border-radius: 16px !important;
+    gap: 10px !important;
+  }
+
+  .facility-editorial-img {
+    height: 120px !important;
+    border-radius: 10px !important;
+  }
+
+  .facility-editorial-info h5 {
+    font-size: 0.85rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .facility-editorial-info p {
+    font-size: 0.73rem !important;
+    line-height: 1.35 !important;
   }
 
   .editorial-journey-section,
@@ -9250,8 +9273,8 @@ body.bg-light,
   }
 
   .fac-showcase-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
   }
 
   .fac-chapter-heading-large {
@@ -9270,9 +9293,9 @@ body.bg-light,
   }
 
   .fac-specs-4col-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding-top: 24px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding-top: 20px !important;
   }
 
   .fac-spec-card {
