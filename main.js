@@ -1389,7 +1389,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const easeProgress = 1 - Math.pow(1 - progress, 3);
                 const currentVal = Math.floor(easeProgress * target);
 
-                stat.textContent = (isComma ? currentVal.toLocaleString('en-US') : currentVal) + suffix;
+                stat.textContent = (isComma ? currentVal.toLocaleString('en-IN') : currentVal) + suffix;
 
                 if (progress < 1) {
                   requestAnimationFrame(updateCounter);
