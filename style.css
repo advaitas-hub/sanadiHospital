@@ -799,18 +799,18 @@ body:not(.intro-complete) .hero-visual {
 }
 
 .hero-headline-prefix {
-  font-family: 'Jim Nightshade', cursive !important;
-  font-size: 3.2rem !important;
-  font-weight: 400 !important;
+  font-family: 'Cinzel', serif !important;
+  font-size: 2.3rem !important;
+  font-weight: 700 !important;
   color: #0F172A !important;
   -webkit-text-fill-color: #0F172A !important;
   background: none !important;
   -webkit-background-clip: border-box !important;
   background-clip: border-box !important;
   display: block !important;
-  line-height: 1.18 !important;
+  line-height: 1.22 !important;
   letter-spacing: 0.02em !important;
-  margin-bottom: 4px !important;
+  margin-bottom: 6px !important;
   opacity: 1 !important;
   visibility: visible !important;
   will-change: transform, opacity, filter;
