@@ -10615,42 +10615,33 @@ body.editorial-about-page {
   margin-top: 4px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .decades-stats-row {
-    flex-wrap: wrap;
-    gap: 14px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px 6px !important;
+    text-align: center !important;
+    padding-top: 14px !important;
   }
-}
 
-.decades-stat-item {
-  display: flex;
-  flex-direction: column;
-}
+  .decades-stat-item {
+    align-items: center !important;
+    text-align: center !important;
+  }
 
-.decades-stat-item .stat-number {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-medical-blue);
-  line-height: 1.1;
-}
+  .decades-stat-item .stat-number {
+    font-size: 1.15rem !important;
+    white-space: nowrap !important;
+  }
 
-.decades-stat-item .stat-label {
-  font-size: 0.775rem;
-  font-weight: 600;
-  color: var(--color-charcoal-subtle);
-  margin-top: 2px;
-}
+  .decades-stat-item .stat-label {
+    font-size: 0.7rem !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
 
-.decades-stat-divider {
-  width: 1px;
-  height: 28px;
-  background: var(--color-border);
-}
-
-@media (max-width: 640px) {
   .decades-stat-divider {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -13960,6 +13951,15 @@ header.header-fixed.scrolled {
 
 .back-to-top-btn:active {
   transform: translateY(0) scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 18px !important;
+    right: 16px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
 }
 
 .back-to-top-btn svg {
