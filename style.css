@@ -781,7 +781,6 @@ a {
 
 /* Hero Elements Initial Hidden State Until Preloader Intro Completes */
 body:not(.intro-complete) .hero-eyebrow-brand,
-body:not(.intro-complete) .hero-headline-prefix,
 body:not(.intro-complete) .hero-headline-highlight,
 body:not(.intro-complete) .hero-lead-statement,
 body:not(.intro-complete) .hero-subtext,
@@ -800,18 +799,20 @@ body:not(.intro-complete) .hero-visual {
 }
 
 .hero-headline-prefix {
-  font-family: 'Allura', 'Fleur De Leah', 'Shadows Into Light', cursive !important;
-  font-size: 3.4rem !important;
-  font-weight: 600 !important;
-  color: #0F172A !important;
-  -webkit-text-fill-color: #0F172A !important;
+  font-family: 'Roboto', 'Plus Jakarta Sans', 'Outfit', sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  color: #1E293B !important;
+  -webkit-text-fill-color: #1E293B !important;
   background: none !important;
   -webkit-background-clip: border-box !important;
   background-clip: border-box !important;
   display: block !important;
-  line-height: 1.15 !important;
-  letter-spacing: 0.01em !important;
-  margin-bottom: 2px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em !important;
+  margin-bottom: 6px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   will-change: transform, opacity, filter;
 }
 
