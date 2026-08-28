@@ -3774,12 +3774,12 @@ body:not(.intro-complete) .hero-visual {
 footer,
 .site-footer {
   margin-top: 60px;
-  background: linear-gradient(180deg, #07223D 0%, #031427 100%) !important;
-  color: #F8FAFC !important;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
   padding: 56px 0 28px 0 !important;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #E2E8F0;
   width: 100%;
 }
 
@@ -3812,11 +3812,11 @@ footer,
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #FFFFFF;
+  background: #F8FAFC;
   padding: 10px 18px;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  border: 1px solid #E2E8F0;
 }
 
 .footer-logo-icon {
@@ -3833,7 +3833,7 @@ footer,
 .footer-tagline-text {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #94A3B8;
+  color: #64748B;
   max-width: 480px;
   margin: 0;
 }
@@ -3849,21 +3849,22 @@ footer,
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #E2E8F0;
+  color: #334155;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-icon-box:hover {
-  background: rgba(37, 99, 235, 0.25);
-  border-color: #3B82F6;
+  background: #2563EB;
+  border-color: #2563EB;
   color: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
 }
 
 .social-icon-box i,
@@ -3878,7 +3879,7 @@ footer,
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #0F172A;
   margin-bottom: 18px;
 }
 
@@ -3892,7 +3893,7 @@ footer,
 }
 
 .footer-clean-links a {
-  color: #CBD5E1;
+  color: #475569;
   text-decoration: none;
   font-size: 0.98rem;
   font-weight: 500;
@@ -3900,7 +3901,7 @@ footer,
 }
 
 .footer-clean-links a:hover {
-  color: #38BDF8;
+  color: #2563EB;
   padding-left: 4px;
 }
 
@@ -3917,7 +3918,7 @@ footer,
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  color: #CBD5E1;
+  color: #334155;
   font-size: 0.95rem;
   line-height: 1.55;
 }
@@ -3926,9 +3927,9 @@ footer,
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: rgba(6, 182, 212, 0.14);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  color: #38BDF8;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3942,14 +3943,14 @@ footer,
 }
 
 .footer-emergency-card {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%);
-  border: 1.5px solid rgba(239, 68, 68, 0.35);
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+  border: 1.5px solid #BFDBFE;
   border-radius: 20px;
   padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -3967,7 +3968,7 @@ footer,
   left: 0;
   width: 4px;
   height: 100%;
-  background: #EF4444;
+  background: #2563EB;
 }
 
 .emergency-card-info {
@@ -3986,8 +3987,8 @@ footer,
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #EF4444;
-  box-shadow: 0 0 10px #EF4444;
+  background: #DC2626;
+  box-shadow: 0 0 10px #DC2626;
   animation: pulseDot 1.5s infinite;
 }
 
@@ -4001,7 +4002,7 @@ footer,
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #F87171;
+  color: #DC2626;
   text-transform: uppercase;
 }
 
@@ -4009,31 +4010,31 @@ footer,
   font-family: var(--font-heading);
   font-size: 1.45rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: #0F172A;
   text-decoration: none;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .emergency-phone-num:hover {
-  color: #60A5FA;
+  color: #2563EB;
 }
 
 .emergency-sub-text {
   font-size: 0.8rem;
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .emergency-card-icon-box {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
   flex-shrink: 0;
 }
 
@@ -4044,7 +4045,7 @@ footer,
 }
 
 .footer-copyright-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #E2E8F0;
   padding-top: 20px;
   font-size: 0.825rem;
   color: #64748B;
