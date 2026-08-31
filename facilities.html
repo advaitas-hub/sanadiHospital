@@ -6,14 +6,15 @@
   <title>Hospital Facilities & Infrastructure - Sanadi Orthopaedic Hospital</title>
   <meta name="description" content="Explore state-of-the-art medical infrastructure and patient care facilities at Sanadi Orthopaedic Hospital in Jamkhandi, including Modular OTs, ICU, Emergency Trauma Care, Diagnostics, and Rehabilitation.">
   
-  <!-- Preconnect & Google Fonts (Exact Same Bundle as Homepage) -->
+  <!-- Preconnect & Google Fonts (3 families actually used by CSS) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+TAS+Beginner:wght@400..700&family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Fleur+De+Leah&family=Griffy&family=Jim+Nightshade&family=Shadows+Into+Light&family=Yuyu+Short&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/style.css">
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons CDN (deferred — non-render-blocking) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body class="editorial-facilities-page">
 
@@ -25,8 +26,8 @@
       <nav class="nav-container" aria-label="Main Navigation">
         <!-- Hospital Logo -->
         <a href="/index.html" class="brand-logo">
-          <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
-          <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+          <img src="/images/logo-icon.webp" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img" loading="lazy" decoding="async">
+          <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="logo-text-img" loading="lazy" decoding="async">
         </a>
 
         <!-- Navigation Links -->
@@ -178,7 +179,7 @@
         <div class="fac-editorial-container">
           <div class="fac-asymmetric-layout">
             <div class="fac-image-col">
-              <img src="/images/editorial-ot-hero.png" alt="Sanadi Hospital Advanced Modular Operation Theater" class="fac-featured-img">
+              <img src="/images/editorial-ot-hero.webp" alt="Sanadi Hospital Advanced Modular Operation Theater" class="fac-featured-img" loading="lazy" decoding="async">
             </div>
             <div class="fac-content-col">
               <span class="fac-eyebrow">FACILITY 01</span>
@@ -245,7 +246,7 @@
               </div>
             </div>
             <div class="fac-image-col">
-              <img src="/images/editorial-icu-care.png" alt="Sanadi Hospital Fully Equipped Intensive Care Unit (ICU)" class="fac-featured-img">
+              <img src="/images/editorial-icu-care.webp" alt="Sanadi Hospital Fully Equipped Intensive Care Unit (ICU)" class="fac-featured-img" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -270,7 +271,7 @@
         <div class="fac-editorial-container">
           <div class="fac-asymmetric-layout">
             <div class="fac-image-col">
-              <img src="/images/surgical-infrastructure.jpg" alt="Sanadi Hospital State-of-the-Art Surgical Infrastructure" class="fac-featured-img">
+              <img src="/images/surgical-infrastructure.webp" alt="Sanadi Hospital State-of-the-Art Surgical Infrastructure" class="fac-featured-img" loading="lazy" decoding="async">
             </div>
             <div class="fac-content-col">
               <span class="fac-eyebrow">FACILITY 03</span>
@@ -341,7 +342,7 @@
               </div>
             </div>
             <div class="fac-image-col">
-              <img src="/images/emergency-care.png" alt="Sanadi Hospital 24x7 Emergency & Trauma Care" class="fac-featured-img">
+              <img src="/images/emergency-care.webp" alt="Sanadi Hospital 24x7 Emergency & Trauma Care" class="fac-featured-img" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -366,7 +367,7 @@
         <div class="fac-editorial-container">
           <div class="fac-asymmetric-layout">
             <div class="fac-image-col">
-              <img src="/images/editorial-radiology-xray.png" alt="Digital Diagnostic Radiology Suite & Inpatient Care" class="fac-featured-img">
+              <img src="/images/editorial-radiology-xray.webp" alt="Digital Diagnostic Radiology Suite & Inpatient Care" class="fac-featured-img" loading="lazy" decoding="async">
             </div>
             <div class="fac-content-col">
               <span class="fac-eyebrow">FACILITY 05</span>
@@ -429,7 +430,7 @@
               </div>
             </div>
             <div class="fac-image-col">
-              <img src="/images/editorial-physio-recovery.png" alt="Sanadi Hospital Comprehensive Physiotherapy & Rehabilitation" class="fac-featured-img">
+              <img src="/images/editorial-physio-recovery.webp" alt="Sanadi Hospital Comprehensive Physiotherapy & Rehabilitation" class="fac-featured-img" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -445,8 +446,8 @@
         <!-- Brand & Tagline Block -->
         <div class="footer-brand-section">
           <div class="footer-logo-card">
-            <img src="/images/logo-icon.png" alt="Sanadi Orthopaedic Hospital Emblem" class="footer-logo-icon">
-            <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="footer-logo-text">
+            <img src="/images/logo-icon.webp" alt="Sanadi Orthopaedic Hospital Emblem" class="footer-logo-icon" loading="lazy" decoding="async">
+            <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="footer-logo-text" loading="lazy" decoding="async">
           </div>
           <p class="footer-tagline-text">
             Committed to delivering compassionate, world-class orthopaedic healthcare to every patient, every day.

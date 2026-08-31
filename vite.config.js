@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
+    cssCodeSplit: true,       // Each page gets only its own CSS chunk
+    target: 'es2020',         // Modern browsers — smaller output, no legacy polyfills
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),

@@ -8,14 +8,19 @@
   <meta name="description"
     content="Established in 2003 by Dr. G. N. Sanadi, Sanadi Orthopaedic Hospital in Jamkhandi is a 40-bedded center of excellence with 22+ years experience, 6,00,000+ patients treated, and 20,000+ successful surgeries.">
 
-  <!-- Preconnect & User Requested Google Fonts Bundle -->
+  <!-- Preconnect & Google Fonts (3 families actually used by CSS) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400..900&family=Edu+TAS+Beginner:wght@400..700&family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Fleur+De+Leah&family=Griffy&family=Jim+Nightshade&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Yuyu+Short&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Preload LCP Hero Image -->
+  <link rel="preload" as="image" href="/images/dr-sanadi-founder.webp" fetchpriority="high">
 
   <link rel="stylesheet" href="/style.css">
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons CDN (deferred — non-render-blocking) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 
 <body>
@@ -26,10 +31,10 @@
     <div class="intro-logo-wrapper">
       <div class="intro-icon-ring">
         <div class="intro-pulse-beacon"></div>
-        <img src="/images/logo-icon.png" alt="Sanadi Hospital Emblem" class="intro-logo-icon">
+        <img src="/images/logo-icon.webp" alt="Sanadi Hospital Emblem" class="intro-logo-icon" fetchpriority="high">
       </div>
       <div class="intro-text-brand">
-        <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="intro-logo-text">
+        <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="intro-logo-text" fetchpriority="high">
         <span class="intro-tagline">CENTER OF EXCELLENCE IN ORTHOPAEDICS</span>
       </div>
     </div>
@@ -43,8 +48,8 @@
       <nav class="nav-container" aria-label="Main Navigation">
         <!-- Hospital Logo -->
         <a href="/index.html" class="brand-logo">
-          <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
-          <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+          <img src="/images/logo-icon.webp" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img" fetchpriority="high">
+          <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="logo-text-img" fetchpriority="high">
         </a>
 
         <!-- Navigation Links -->
@@ -128,7 +133,7 @@
 
           <!-- Cutout Doctor Image Container -->
           <div class="doctor-cutout-wrapper">
-            <img src="/images/dr-sanadi-founder.png" alt="Dr. G. N. Sanadi - Founder & Chief Orthopaedic Surgeon">
+            <img src="/images/dr-sanadi-founder.webp" alt="Dr. G. N. Sanadi - Founder & Chief Orthopaedic Surgeon" fetchpriority="high">
           </div>
 
           <!-- Small Medical Decorative Icons -->
@@ -209,8 +214,8 @@
           <!-- Card 1: Orthopaedics -->
           <div class="specialty-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/orthopedics.png" alt="Orthopaedics" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/orthopedics.webp" alt="Orthopaedics" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="bone" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -225,8 +230,8 @@
           <!-- Card 2: Trauma Care -->
           <div class="specialty-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/trauma-care.png" alt="Trauma Care" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/trauma-care.webp" alt="Trauma Care" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="activity" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -241,8 +246,8 @@
           <!-- Card 3: Neurosurgery -->
           <div class="specialty-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/neurosurgery.png" alt="Neurosurgery" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/neurosurgery.webp" alt="Neurosurgery" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="brain" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -257,8 +262,8 @@
           <!-- Card 4: Joint Replacement -->
           <div class="specialty-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/joint-replacement.png" alt="Joint Replacement" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/joint-replacement.webp" alt="Joint Replacement" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="cross" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -273,8 +278,8 @@
           <!-- Card 5: Arthroscopy -->
           <div class="specialty-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/arthroscopy.png" alt="Arthroscopy" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/arthroscopy.webp" alt="Arthroscopy" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="target" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -289,8 +294,8 @@
           <!-- Card 6: Physiotherapy -->
           <div class="specialty-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/physiotherapy.png" alt="Physiotherapy" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/physiotherapy.webp" alt="Physiotherapy" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="heart-pulse" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -305,8 +310,8 @@
           <!-- Card 7: Sports Medicine (hidden by default) -->
           <div class="specialty-card hidden-card">
             <div class="specialty-icon-wrapper">
-              <img src="/images/sports-medicine-3d.png" alt="Sports Medicine 3D Illustration" class="specialty-icon"
-                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));"
+              <img src="/images/sports-medicine-3d.webp" alt="Sports Medicine 3D Illustration" class="specialty-icon" loading="lazy" decoding="async"
+                style="width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.22));" 
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
               <i data-lucide="trophy" style="width: 28px; height: 28px; color: #2563EB; display: none;"></i>
             </div>
@@ -498,8 +503,8 @@
                 <!-- Card 1: Experienced Orthopaedic Care -->
                 <div class="trust-carousel-slide">
                   <div class="trust-carousel-card">
-                    <img src="/images/trust-ortho-care.png" alt="Senior Indian orthopaedic doctor reviewing X-ray scan"
-                      class="trust-carousel-image">
+                    <img src="/images/trust-ortho-care.webp" alt="Senior Indian orthopaedic doctor reviewing X-ray scan"
+                      class="trust-carousel-image" loading="lazy" decoding="async">
                     <div class="trust-carousel-overlay"></div>
                     <div class="trust-carousel-content">
                       <h3 class="trust-carousel-card-title">Experienced Orthopaedic Care</h3>
@@ -511,9 +516,9 @@
                 <!-- Card 2: Clear Treatment Planning -->
                 <div class="trust-carousel-slide">
                   <div class="trust-carousel-card">
-                    <img src="/images/trust-treatment-plan.png"
+                    <img src="/images/trust-treatment-plan.webp"
                       alt="Indian doctor explaining knee joint anatomical model to patient"
-                      class="trust-carousel-image">
+                      class="trust-carousel-image" loading="lazy" decoding="async">
                     <div class="trust-carousel-overlay"></div>
                     <div class="trust-carousel-content">
                       <h3 class="trust-carousel-card-title">Clear Treatment Planning</h3>
@@ -525,8 +530,8 @@
                 <!-- Card 3: Specialist-Led Care -->
                 <div class="trust-carousel-slide">
                   <div class="trust-carousel-card">
-                    <img src="/images/trust-specialist-care.png"
-                      alt="Indian orthopaedic specialist in patient consultation" class="trust-carousel-image">
+                    <img src="/images/trust-specialist-care.webp"
+                      alt="Indian orthopaedic specialist in patient consultation" class="trust-carousel-image" loading="lazy" decoding="async">
                     <div class="trust-carousel-overlay"></div>
                     <div class="trust-carousel-content">
                       <h3 class="trust-carousel-card-title">Specialist-Led Care</h3>
@@ -538,9 +543,9 @@
                 <!-- Card 4: Transparent & Ethical Advice -->
                 <div class="trust-carousel-slide">
                   <div class="trust-carousel-card">
-                    <img src="/images/indian-doctor-consultation.png"
+                    <img src="/images/indian-doctor-consultation.webp"
                       alt="Indian orthopaedic doctor in patient consultation discussing treatment transparently"
-                      class="trust-carousel-image">
+                      class="trust-carousel-image" loading="lazy" decoding="async">
                     <div class="trust-carousel-overlay"></div>
                     <div class="trust-carousel-content">
                       <h3 class="trust-carousel-card-title">Transparent & Ethical Advice</h3>
@@ -552,9 +557,9 @@
                 <!-- Card 5: Stringent Safety & Infection Control -->
                 <div class="trust-carousel-slide">
                   <div class="trust-carousel-card">
-                    <img src="/images/editorial-radiology-xray.png"
+                    <img src="/images/editorial-radiology-xray.webp"
                       alt="Radiology and diagnostic scan evaluation under strict patient safety standards"
-                      class="trust-carousel-image">
+                      class="trust-carousel-image" loading="lazy" decoding="async">
                     <div class="trust-carousel-overlay"></div>
                     <div class="trust-carousel-content">
                       <h3 class="trust-carousel-card-title">Stringent Safety & Infection Control</h3>
@@ -566,9 +571,9 @@
                 <!-- Card 6: Patient-First Support & Comfort -->
                 <div class="trust-carousel-slide">
                   <div class="trust-carousel-card">
-                    <img src="/images/patient-care.jpg"
+                    <img src="/images/patient-care.webp"
                       alt="Compassionate healthcare professional assisting patient during hospital visit"
-                      class="trust-carousel-image">
+                      class="trust-carousel-image" loading="lazy" decoding="async">
                     <div class="trust-carousel-overlay"></div>
                     <div class="trust-carousel-content">
                       <h3 class="trust-carousel-card-title">Patient-First Support & Comfort</h3>
@@ -597,8 +602,8 @@
       <section class="about-building-showcase-section" id="about-building">
         <div class="about-building-container">
           <div class="about-building-image-wrap">
-            <img src="/IMG_8896.PNG" alt="Sanadi Orthopaedic Hospital Building Facade Jamkhandi"
-              class="about-building-img">
+            <img src="/IMG_8896.webp" alt="Sanadi Orthopaedic Hospital Building Facade Jamkhandi"
+              class="about-building-img" loading="lazy" decoding="async">
           </div>
           <div class="about-building-content">
             <span class="section-tag">ABOUT OUR HOSPITAL</span>
@@ -972,8 +977,8 @@
           <!-- Left Column: Image Card Only -->
           <div class="faq-image-col">
             <div class="faq-image-card">
-              <img src="/images/indian-doctor-consultation.png"
-                alt="Sanadi Orthopaedic Hospital Doctor Patient Consultation" class="faq-img">
+              <img src="/images/indian-doctor-consultation.webp"
+                alt="Sanadi Orthopaedic Hospital Doctor Patient Consultation" class="faq-img" loading="lazy" decoding="async">
             </div>
           </div>
 
@@ -1239,8 +1244,8 @@
         <!-- Brand & Tagline Block -->
         <div class="footer-brand-section">
           <div class="footer-logo-card">
-            <img src="/images/logo-icon.png" alt="Sanadi Orthopaedic Hospital Emblem" class="footer-logo-icon">
-            <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="footer-logo-text">
+            <img src="/images/logo-icon.webp" alt="Sanadi Orthopaedic Hospital Emblem" class="footer-logo-icon" loading="lazy" decoding="async">
+            <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="footer-logo-text" loading="lazy" decoding="async">
           </div>
           <p class="footer-tagline-text">
             Committed to delivering compassionate, world-class orthopaedic healthcare to every patient, every day.

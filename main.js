@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
           preloader.parentNode.removeChild(preloader);
         }
       }, 850);
-    }, 1400);
+    }, 800); // Reduced from 1400ms → 800ms for faster perceived load
   } else {
     document.body.classList.add('intro-complete');
   }
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll Event Listener (Optimized via requestAnimationFrame)
+  // Scroll Event Listener (Optimized via requestAnimationFrame + passive:true)
   let isTicking = false;
   window.addEventListener('scroll', () => {
     if (!isTicking) {
@@ -105,18 +105,23 @@ document.addEventListener('DOMContentLoaded', () => {
           backToTopBtn?.classList.remove('is-visible');
         }
 
-        // Subtle Parallax Scroll Effect for Hero and Floating Graphics
+        // Subtle Parallax Scroll Effect — dirty-checked to avoid redundant paint
         const parallaxEls = document.querySelectorAll('[data-parallax], .hero-doctor-cutout, .editorial-ot-hero');
         parallaxEls.forEach(el => {
           const speed = parseFloat(el.getAttribute('data-parallax-speed') || '-0.08');
-          el.style.transform = `translateY(${scrolled * speed}px)`;
+          const newVal = scrolled * speed;
+          const prev = parseFloat(el.dataset.lastParallax || '9999');
+          if (Math.abs(newVal - prev) > 0.5) {
+            el.style.transform = `translateY(${newVal}px)`;
+            el.dataset.lastParallax = newVal;
+          }
         });
 
         isTicking = false;
       });
       isTicking = true;
     }
-  });
+  }, { passive: true });
 
   // 3. Mobile Menu Drawer Toggle
   const mobileToggle = document.getElementById('mobileToggle');
@@ -190,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryLabel: "Orthopaedics",
       specialty: "Founder & Chief Orthopaedic Surgeon",
       experience: "25+ Years Exp.",
-      imgSrc: "/images/dr-sanadi-founder.png"
+      imgSrc: "/images/dr-sanadi-founder.webp"
     },
     {
       id: "doc-1",
@@ -199,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryLabel: "Neurosurgery",
       specialty: "Consultant Neurosurgeon",
       experience: "15+ Years Exp.",
-      imgSrc: "/images/doctor-2.jpg"
+      imgSrc: "/images/doctor-2.webp"
     },
     {
       id: "doc-2",
@@ -208,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryLabel: "Orthopaedics",
       specialty: "Trauma & Joint Replacement Surgeon",
       experience: "14+ Years Exp.",
-      imgSrc: "/images/doctor-3.jpg"
+      imgSrc: "/images/doctor-3.webp"
     },
     {
       id: "doc-3",
@@ -217,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryLabel: "Anaesthesiology",
       specialty: "Consultant Anaesthesiologist",
       experience: "18+ Years Exp.",
-      imgSrc: "/images/doctor-1.jpg"
+      imgSrc: "/images/doctor-1.webp"
     },
     {
       id: "doc-4",
@@ -226,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryLabel: "Anaesthesiology",
       specialty: "Consultant Anaesthesiologist",
       experience: "12+ Years Exp.",
-      imgSrc: "/images/doctor-4.jpg"
+      imgSrc: "/images/doctor-4.webp"
     },
     {
       id: "doc-5",
@@ -235,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryLabel: "Orthopaedics",
       specialty: "In-charge Doctor & Physician",
       experience: "10+ Years Exp.",
-      imgSrc: "/images/doctor-5.jpg"
+      imgSrc: "/images/doctor-5.webp"
     }
   ];
 
@@ -445,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.setProperty('--spotlight-opacity', '0');
         }
       });
-    });
+    }, { passive: true }); // passive:true — never blocks scroll
   }
 
   // 8. WhatsApp Direct Integration Service Request Form Handler
@@ -558,6 +563,9 @@ document.addEventListener('DOMContentLoaded', () => {
     panel.addEventListener('pointerenter', () => { targetSpeed = 240; });
     panel.addEventListener('pointerleave', () => { targetSpeed = 42; });
 
+    let beamRafId = null;
+    let beamRunning = false;
+
     function animateBeam(now) {
       if (!lastTime) lastTime = now;
       const dt = Math.min((now - lastTime) / 1000, 0.05);
@@ -571,10 +579,23 @@ document.addEventListener('DOMContentLoaded', () => {
       angle += speed * dt;
       panel.style.setProperty('--mk-beam-a', `${(((angle % 360) + 360) % 360).toFixed(2)}deg`);
 
-      requestAnimationFrame(animateBeam);
+      beamRafId = requestAnimationFrame(animateBeam);
     }
 
-    requestAnimationFrame(animateBeam);
+    // Pause/resume the RAF loop based on visibility — no CPU/GPU cost when off-screen
+    const beamObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !beamRunning) {
+          beamRunning = true;
+          lastTime = 0;
+          beamRafId = requestAnimationFrame(animateBeam);
+        } else if (!entry.isIntersecting && beamRunning) {
+          beamRunning = false;
+          if (beamRafId) cancelAnimationFrame(beamRafId);
+        }
+      });
+    }, { threshold: 0.01 });
+    beamObserver.observe(panel);
   });
 
   // Section & Card Staggered Scroll Entrance Observer
@@ -906,9 +927,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCoverflow();
     startAutoplay();
 
-    // Recalculate on resize
+    // Recalculate on resize — debounced to avoid layout thrash on every resize event
+    let resizeTimer = null;
     window.addEventListener('resize', () => {
-      updateCoverflow();
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => updateCoverflow(), 200);
     });
   }
 
@@ -1242,24 +1265,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const chapterSections = document.querySelectorAll('#surgical-care, #critical-care, #inpatient-care, #diagnostics, #recovery');
 
     if (editorialNavLinks.length > 0 && chapterSections.length > 0) {
+      // Debounced via rAF — runs at most once per frame instead of on every scroll tick
+      let facNavTicking = false;
       window.addEventListener('scroll', () => {
-        let currentId = '';
-        const scrollPos = window.scrollY + 250;
+        if (!facNavTicking) {
+          window.requestAnimationFrame(() => {
+            let currentId = '';
+            const scrollPos = window.scrollY + 250;
 
-        chapterSections.forEach(section => {
-          if (scrollPos >= section.offsetTop) {
-            currentId = section.getAttribute('id');
-          }
-        });
+            chapterSections.forEach(section => {
+              if (scrollPos >= section.offsetTop) {
+                currentId = section.getAttribute('id');
+              }
+            });
 
-        if (currentId) {
-          editorialNavLinks.forEach(link => {
-            if (link.getAttribute('href') === `#${currentId}`) {
-              link.classList.add('active');
-            } else {
-              link.classList.remove('active');
+            if (currentId) {
+              editorialNavLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${currentId}`) {
+                  link.classList.add('active');
+                } else {
+                  link.classList.remove('active');
+                }
+              });
             }
+            facNavTicking = false;
           });
+          facNavTicking = true;
         }
       }, { passive: true });
     }
@@ -1645,6 +1676,9 @@ document.addEventListener('DOMContentLoaded', () => {
     resize();
 
     const start = performance.now();
+    let shaderRafId = null;
+    let shaderRunning = false;
+
     function render(now) {
       mouseX += (targetX - mouseX) * 0.1;
       mouseY += (targetY - mouseY) * 0.1;
@@ -1655,9 +1689,44 @@ document.addEventListener('DOMContentLoaded', () => {
       gl.uniform4f(uni.cursor, cursorPresence, 1.0, 1.0, 0.8);
 
       gl.drawArrays(gl.TRIANGLES, 0, 3);
-      requestAnimationFrame(render);
+      shaderRafId = requestAnimationFrame(render);
     }
-    requestAnimationFrame(render);
+
+    function startShader() {
+      if (!shaderRunning) {
+        shaderRunning = true;
+        shaderRafId = requestAnimationFrame(render);
+      }
+    }
+
+    function stopShader() {
+      if (shaderRunning) {
+        shaderRunning = false;
+        if (shaderRafId) cancelAnimationFrame(shaderRafId);
+      }
+    }
+
+    // Pause when canvas scrolls out of view
+    const shaderObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) startShader();
+        else stopShader();
+      });
+    }, { threshold: 0.01 });
+    shaderObserver.observe(canvas);
+
+    // Pause when browser tab loses focus (saves GPU when user switches tabs)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopShader();
+      else if (shaderObserver) startShader();
+    });
+
+    // Respect reduced motion preference — skip GPU-heavy shader entirely
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return; // Don't start shader at all
+    }
+
+    startShader();
   }
 
   initHeroShaderBackground();

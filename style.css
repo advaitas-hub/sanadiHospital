@@ -3,7 +3,8 @@
    Full-Width Edge-to-Edge Layout Architecture with Rounded Doctor Cards
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=Cinzel:wght@400..900&display=swap');
+/* Font-face fallback comment: fonts loaded via HTML <link> with display=swap */
+/* @import removed — avoids double network round-trip and render-blocking CSS import */
 
 :root {
   /* Color Palette */
@@ -50,6 +51,7 @@
 
   /* Transitions */
   --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Base Styles */
@@ -85,7 +87,7 @@ body {
   overflow-x: hidden !important;
 }
 
-/* Ambient Top Glow */
+/* Ambient top glow — pure gradient, no expensive filter:blur on a fixed element */
 body::before {
   content: '';
   position: fixed;
@@ -94,10 +96,10 @@ body::before {
   width: 850px;
   height: 850px;
   border-radius: 50%;
-  filter: blur(140px);
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.28) 0%, rgba(99, 102, 241, 0.18) 45%, rgba(238, 242, 246, 0) 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.14) 0%, rgba(99, 102, 241, 0.08) 45%, rgba(238, 242, 246, 0) 70%);
+  /* Note: filter:blur removed — it forces a composite layer and GPU stall on every frame */
 }
 
 /* Full Width Canvas Container with Clean Solid Footer Alignment */
@@ -14543,3 +14545,91 @@ header.header-fixed.scrolled {
   0% { left: -100%; }
   35%, 100% { left: 220%; }
 }
+
+/* ==========================================================================
+   PERFORMANCE: content-visibility for heavy off-screen sections
+   Skips rendering until section enters viewport — major paint/layout savings
+   ========================================================================== */
+.doctors-section,
+.why-trust-carousel-section,
+.contact-section,
+.contact-section-grid,
+.site-footer,
+footer,
+.about-aceternity-timeline,
+.editorial-problems-section,
+.editorial-treatments-section,
+.editorial-journey-section,
+.editorial-facilities-section,
+.editorial-recovery-section,
+.editorial-final-cta {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ==========================================================================
+   PERFORMANCE: GPU compositing hints for animated elements
+   ========================================================================== */
+.trust-carousel-slide,
+.specialist-flip-card,
+.specialist-card-item,
+.intro-logo-icon,
+.intro-logo-text,
+.intro-pulse-beacon,
+.stagger-item,
+.reveal-on-scroll,
+.reveal-fade-left,
+.reveal-fade-right,
+.reveal-scale {
+  will-change: transform, opacity;
+}
+
+/* ==========================================================================
+   PERFORMANCE: image rendering optimisation
+   ========================================================================== */
+img {
+  content-visibility: auto;
+}
+
+/* Optimize scrollable containers to use GPU compositing */
+.doctor-slider-track,
+.trust-carousel-container,
+.related-nav-links {
+  will-change: scroll-position;
+}
+
+/* ==========================================================================
+   PERFORMANCE + ACCESSIBILITY: Respect user's OS reduced-motion preference
+   Disables expensive animations for users who opt out (improves perf + a11y)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .site-intro-preloader {
+    display: none !important;
+  }
+
+  .intro-pulse-beacon {
+    animation: none !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-fade-left,
+  .reveal-fade-right,
+  .reveal-scale,
+  .specialty-scroll-reveal,
+  .stagger-item,
+  .about-stagger-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
