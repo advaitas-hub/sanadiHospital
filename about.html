@@ -9,11 +9,12 @@
   <!-- Preconnect & Google Fonts Bundle -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/style.css">
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons CDN (deferred — non-render-blocking) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body class="editorial-about-page">
 
@@ -25,8 +26,8 @@
       <nav class="nav-container" aria-label="Main Navigation">
         <!-- Hospital Logo -->
         <a href="/index.html" class="brand-logo">
-          <img src="/images/logo-icon.png" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img">
-          <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="logo-text-img">
+          <img src="/images/logo-icon.webp" alt="Sanadi Orthopedic Hospital Emblem" class="logo-icon-img" loading="lazy" decoding="async">
+          <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="logo-text-img" loading="lazy" decoding="async">
         </a>
 
         <!-- Navigation Links -->
@@ -186,7 +187,7 @@
                 <div class="principles-center-pulse principles-center-pulse-1"></div>
                 <div class="principles-center-pulse principles-center-pulse-2"></div>
                 <div class="principles-center-inner">
-                  <img src="/images/logo-icon.png" alt="Sanadi Orthopaedic Hospital Emblem" class="principles-logo-img">
+                  <img src="/images/logo-icon.webp" alt="Sanadi Orthopaedic Hospital Emblem" class="principles-logo-img" loading="lazy" decoding="async">
                 </div>
               </div>
 
@@ -343,7 +344,7 @@
                   <div class="timeline-founder-flex">
                     <div class="founder-portrait-col">
                       <div class="founder-portrait-frame">
-                        <img src="/images/dr-sanadi-founder.png" alt="Dr. G. N. Sanadi — Founder, Sanadi Orthopaedic Hospital">
+                        <img src="/images/dr-sanadi-founder.webp" alt="Dr. G. N. Sanadi — Founder, Sanadi Orthopaedic Hospital" loading="lazy" decoding="async">
                       </div>
                     </div>
                     <div class="founder-story-col">
@@ -383,7 +384,7 @@
                     <!-- Left Column: Hospital Photo Frame -->
                     <div class="decades-image-col">
                       <div class="hospital-frame-left">
-                        <img src="/images/img_8896.png" alt="Sanadi Orthopaedic Hospital Building Facade Today">
+                        <img src="/images/img_8896.webp" alt="Sanadi Orthopaedic Hospital Building Facade Today" loading="lazy" decoding="async">
                       </div>
                     </div>
 
@@ -520,8 +521,8 @@
         <!-- Brand & Tagline Block -->
         <div class="footer-brand-section">
           <div class="footer-logo-card">
-            <img src="/images/logo-icon.png" alt="Sanadi Orthopaedic Hospital Emblem" class="footer-logo-icon">
-            <img src="/images/logo-text.png" alt="Sanadi Orthopaedic Hospital" class="footer-logo-text">
+            <img src="/images/logo-icon.webp" alt="Sanadi Orthopaedic Hospital Emblem" class="footer-logo-icon" loading="lazy" decoding="async">
+            <img src="/images/logo-text.webp" alt="Sanadi Orthopaedic Hospital" class="footer-logo-text" loading="lazy" decoding="async">
           </div>
           <p class="footer-tagline-text">
             Committed to delivering compassionate, world-class orthopaedic healthcare to every patient, every day.
