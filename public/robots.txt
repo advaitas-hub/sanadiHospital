@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
 Sitemap: https://sanadihospital.in/sitemap.xml
+=======
+# Robots.txt for Sanadi Orthopaedic Hospital Jamkhandi
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://sanadihospital.com/sitemap.xml
+>>>>>>> 3cf3df8 (Add XML Sitemap, robots.txt, canonical, OpenGraph, and Schema.org Hospital Structured Data for Google Indexing)
