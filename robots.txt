@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://sanadihospital.com/sitemap.xml
+Sitemap: https://sanadihospital.in/sitemap.xml
