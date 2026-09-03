@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.9.0/schemas/plan.schema.json",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "type": "frontend",
+  "name": "Mobile Navigation and Responsive Layout",
+  "description": "Verify responsive header, mobile menu toggle, drawer navigation, and specialty sub-links",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to https://sanadihospital.in/ on a mobile viewport"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the mobile hamburger menu toggle button is visible in the header"
+    },
+    {
+      "type": "action",
+      "description": "Click the mobile menu hamburger button"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the mobile navigation drawer expands with Home, Specialties, Facilities, and About Us links"
+    }
+  ]
+}

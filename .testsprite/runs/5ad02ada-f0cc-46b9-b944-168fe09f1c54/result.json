@@ -1,0 +1,20 @@
+{
+  "testId": "61c1bcda-fdc5-4417-9e3c-cb11cafcb76e",
+  "status": "blocked",
+  "startedAt": "2026-09-03T15:26:38.937Z",
+  "finishedAt": "2026-09-03T15:27:43.336Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/146864d8-2071-709d-3284-6179437bcbda/1788449263138664//tmp/3b7ba1f5-f03e-4fb9-b463-229efbd4c532/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_571508418da6ce5d",
+  "runIdIfAvailable": "5ad02ada-f0cc-46b9-b944-168fe09f1c54",
+  "codeVersion": "v1",
+  "targetUrl": "https://sanadihospital.in",
+  "targetUrlSource": "run",
+  "failedStepIndex": 2,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED\n\nThe test could not be run — the site loaded in a desktop layout and the environment does not provide a way to switch the browser to a mobile viewport for this session.\n\nObservations:\n- The page loaded in desktop layout and the header shows full navigation links (Home, Specialties, Facilities, About Us, Book now).\n- No mobile hamburger menu is visible in the header in the current rendering.\n- No supported action was available in this envi…",
+  "apiOutput": null,
+  "trace": null
+}

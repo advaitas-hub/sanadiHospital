@@ -1,0 +1,9 @@
+{
+  "rootCauseHypothesis": "TEST FAILURE\n\nRequired head metadata and JSON-LD were not found on the homepage during this session.\n\nObservations:\n- The page does not expose a link rel=\"canonical\" pointing to https://sanadihospital.in/ (canonical not found).\n- Meta description, meta keywords, meta robots, and Open Graph tags (og:title, og:image) were not found in the extractable page head.\n- No application/ld+json JSON-LD content containing the MedicalBusiness phone number +91-8353298899 was found (no JSON-LD script with that phone string was retrieved).",
+  "recommendedFixTarget": {
+    "kind": "unknown",
+    "reference": "canonical",
+    "rationale": null
+  },
+  "evidence": []
+}

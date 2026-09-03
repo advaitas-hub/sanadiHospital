@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 2,
+    "summary": "Step 2 'Expected the mobile hamburger menu toggle button to be visible in the header.' failed. Error: TEST BLOCKED\n\nThe test could not be run — the site loaded in a desktop layout and the environment does not provide a way to switch the browser to a mobile viewport for this session.\n\nObservations:\n- The page loaded in desktop layout and the header shows full navigation links (Home, Specialties, Facilities, About Us, Book now).\n- No mobile hamburger menu is visible in the header in the current rendering.\n- No supported action was available in this environment to change the viewport or user-agent to emulate a mobile device, so the mobile-only UI could not be reached.",
+    "path": "steps/02-snapshot.html"
+  }
+]

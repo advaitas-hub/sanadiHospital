@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.9.0/schemas/plan.schema.json",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "type": "frontend",
+  "name": "About Us and Hospital Facilities Pages",
+  "description": "Verify About Us founder timeline and Facilities infrastructure pages load properly",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the About page at https://sanadihospital.in/about.html"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the About heading mentions Dr. G. N. Sanadi and 22+ years of surgical excellence"
+    },
+    {
+      "type": "action",
+      "description": "Navigate to the Facilities page at https://sanadihospital.in/facilities.html"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the Modular Operation Theatres, ICU, and Diagnostics sections are displayed"
+    }
+  ]
+}

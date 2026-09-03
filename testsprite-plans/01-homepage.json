@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.9.0/schemas/plan.schema.json",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "type": "frontend",
+  "name": "Homepage Navigation and Core Sections",
+  "description": "Verify homepage hero, brand emblem, specialty navigation links, and call-to-action buttons load correctly",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the homepage https://sanadihospital.in/"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the page title contains 'Sanadi Orthopaedic Hospital'"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the hospital logo and navigation bar are visible"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify key hospital metrics and clinical services section are rendered"
+    },
+    {
+      "type": "action",
+      "description": "Click on the 'About' link in the top navigation"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify navigation reaches the About Us page at /about.html"
+    }
+  ]
+}
