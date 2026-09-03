@@ -1,4 +1,6 @@
+# Robots.txt for Sanadi Orthopaedic Hospital Jamkhandi
 User-agent: *
 Allow: /
 
+# Sitemap Location
 Sitemap: https://sanadihospital.in/sitemap.xml
