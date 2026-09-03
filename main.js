@@ -1039,23 +1039,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const specialtyPage = document.querySelector('.specialty-editorial-page');
     if (!specialtyPage) return;
 
-    // 14.1 Hero Graphic Scroll Parallax Effect
+    // 14.1 Hero Graphic Static Position (Fixed in place, no scroll overlap)
     const heroImageWrap = specialtyPage.querySelector('.editorial-hero-image-wrap');
     if (heroImageWrap) {
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const scrollY = window.scrollY;
-            if (scrollY < 900) {
-              heroImageWrap.style.transform = `translateY(${scrollY * 0.12}px)`;
-            }
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
+      heroImageWrap.style.transform = 'none';
     }
+
 
     // 14.2 Scroll Reveal Animations for Major Sections
     const majorSections = specialtyPage.querySelectorAll(
