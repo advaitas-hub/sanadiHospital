@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.9.0/schemas/plan.schema.json",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "type": "frontend",
+  "name": "Sports Injury Clinic and Athletic Medicine",
+  "description": "Verify Sports Injury Clinic page, athletic medicine procedures, PRP therapies, and return-to-play programs",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to https://sanadihospital.in/specialties/sports-injury-clinic.html"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the page title contains 'Sports Injury Clinic'"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify athletic injury treatment, ligament repair, and rehabilitation protocols are visible"
+    }
+  ]
+}

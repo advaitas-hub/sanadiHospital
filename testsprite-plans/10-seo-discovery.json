@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.9.0/schemas/plan.schema.json",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "type": "frontend",
+  "name": "SEO Discovery and Meta Tag Verification",
+  "description": "Verify canonical links, structured schema data, Open Graph previews, and robots discovery on homepage",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the homepage https://sanadihospital.in/"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify canonical link rel='canonical' points to https://sanadihospital.in/"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify meta description, keywords, and Open Graph og:title and og:image tags are present in the DOM"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify JSON-LD structured script of type application/ld+json exists and contains MedicalBusiness schema with phone number +91-8353298899"
+    }
+  ]
+}

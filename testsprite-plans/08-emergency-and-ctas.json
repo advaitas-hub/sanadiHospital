@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.9.0/schemas/plan.schema.json",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "type": "frontend",
+  "name": "Emergency Contacts and Booking CTAs",
+  "description": "Verify telephone links, emergency hotline 083532 98899, WhatsApp chat triggers, and booking callouts",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the homepage https://sanadihospital.in/"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the emergency hotline and phone contact links with tel: protocol exist on the page"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the WhatsApp contact integration buttons and consultation CTAs are functional and clickable"
+    },
+    {
+      "type": "action",
+      "description": "Scroll down to the hospital footer section"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the Jamkhandi address, phone number, and hospital hours are listed in the footer"
+    }
+  ]
+}

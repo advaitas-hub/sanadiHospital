@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "cli-v1",
+  "snapshotId": "snap_571508418da6ce5d",
+  "testId": "61c1bcda-fdc5-4417-9e3c-cb11cafcb76e",
+  "projectId": "4e198f6e-2e68-4ac3-8ab9-f12dda8e9f2d",
+  "codeVersion": "v1",
+  "runIdIfAvailable": "5ad02ada-f0cc-46b9-b944-168fe09f1c54",
+  "targetUrl": "https://sanadihospital.in",
+  "failedStepIndex": 2,
+  "failureKind": null,
+  "capturedAt": "2026-09-03T15:27:43.336Z",
+  "fetchedAt": "2026-09-03T15:28:43.463Z"
+}

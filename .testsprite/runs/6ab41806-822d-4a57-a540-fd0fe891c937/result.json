@@ -1,0 +1,20 @@
+{
+  "testId": "c50bb3ec-17f6-43f0-87c4-3ce5133892c9",
+  "status": "failed",
+  "startedAt": "2026-09-03T15:29:03.793Z",
+  "finishedAt": "2026-09-03T15:38:40.221Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/146864d8-2071-709d-3284-6179437bcbda/1788449916954238//tmp/149e4957-32c0-451e-ba89-574ba03f1ca1/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_99482cfe9ea887f3",
+  "runIdIfAvailable": "6ab41806-822d-4a57-a540-fd0fe891c937",
+  "codeVersion": "v1",
+  "targetUrl": "https://sanadihospital.in",
+  "targetUrlSource": "run",
+  "failedStepIndex": 2,
+  "failureKind": "assertion",
+  "verdict": "failed",
+  "executionStatus": "completed",
+  "summary": "Failed (assertion) on step 2: TEST FAILURE\n\nRequired head metadata and JSON-LD were not found on the homepage during this session.\n\nObservations:\n- The page does not expose a link rel=\"canonical\" pointing to https://sanadihospital.in/ (canonical not found).\n- Meta description, meta keywords, meta robots, and Open Graph tags (og:title, og:image) were not found in the extractable page head.\n- No application/ld+json JSON-LD content containing the MedicalBusiness phone number +91-8353298899 was fou…",
+  "apiOutput": null,
+  "trace": null
+}
