@@ -5,80 +5,73 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <url>
-    <loc>https://sanadihospital.com/</loc>
+    <loc>https://sanadihospital.in/</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   
   <url>
-    <loc>https://sanadihospital.com/about.html</loc>
+    <loc>https://sanadihospital.in/about.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <url>
+    <loc>https://sanadihospital.in/facilities.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <url>
+    <loc>https://sanadihospital.in/specialties/orthopaedics.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://sanadihospital.com/facilities.html</loc>
+    <loc>https://sanadihospital.in/specialties/trauma-care.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://sanadihospital.com/specialties/orthopaedics.html</loc>
+    <loc>https://sanadihospital.in/specialties/neurosurgery.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://sanadihospital.com/specialties/trauma-care.html</loc>
+    <loc>https://sanadihospital.in/specialties/joint-replacement.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://sanadihospital.com/specialties/neurosurgery.html</loc>
+    <loc>https://sanadihospital.in/specialties/arthroscopy.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sanadihospital.in/specialties/physiotherapy.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
   
   <url>
-    <loc>https://sanadihospital.com/specialties/joint-replacement.html</loc>
+    <loc>https://sanadihospital.in/specialties/sports-injury-clinic.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://sanadihospital.com/specialties/spine-care.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://sanadihospital.com/specialties/sports-injury-clinic.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://sanadihospital.com/specialties/arthroscopy-rehab.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <url>
-    <loc>https://sanadihospital.com/specialties/pediatric-orthopaedics.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
 
 </urlset>
