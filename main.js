@@ -26,6 +26,45 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
+  // 1.2 Universal Smooth Hash Navigation Engine (e.g. #contact)
+  function scrollToHashTarget(targetHash) {
+    const hash = targetHash || window.location.hash;
+    if (!hash || hash === '#') return;
+    const targetEl = document.querySelector(hash);
+    if (targetEl) {
+      const defaultHeaderOffset = window.innerWidth <= 992 ? -10 : 0;
+      const targetRect = targetEl.getBoundingClientRect();
+      const targetTop = targetRect.top + window.pageYOffset - defaultHeaderOffset;
+      window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  if (window.location.hash) {
+    setTimeout(() => scrollToHashTarget(), 100);
+    window.addEventListener('load', () => setTimeout(() => scrollToHashTarget(), 220), { once: true });
+  }
+
+  document.body.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="#"]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href) return;
+    try {
+      const url = new URL(href, window.location.origin);
+      if (url.pathname === window.location.pathname && url.hash) {
+        const targetEl = document.querySelector(url.hash);
+        if (targetEl) {
+          e.preventDefault();
+          history.pushState(null, '', url.hash);
+          scrollToHashTarget(url.hash);
+        }
+      }
+    } catch (err) {}
+  });
+
   // 1.5 SVG Area Line Chart Graph Path Drawing & Interactive Controls Engine
   const chartCard = document.getElementById('clinicalOutcomeGraphCard');
   if (chartCard) {
